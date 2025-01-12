@@ -1,29 +1,8 @@
-## React + Vite
+# React + Vite
 
-# Final Project: News Explorer
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-### Overview
+Currently, two official plugins are available:
 
-This is the front end of the [News Explorer](https://github.com/nathanielDaley/news-explorer-frontend) web application. Search for and save new articles from the [News Api](https://newsapi.org/).
-
-[Backend](https://github.com/nathanielDaley/news-explorer-backend)
-
-**Figma**
-
-- [Link to the project on Figma](https://www.figma.com/design/3ottwMEhlBt95Dbn8dw1NH/Your-Final-Project?node-id=0-1&p=f)
-
-**Images**
-
-- Images provided via the Figma above
-
-## Project features
-
-- Semantic HTML5
-- Flexbox
-- Positioning
-- Flat BEM file structure
-- Javascript
-- React
-- Vite
-- ESLint
-- gh-pages
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
