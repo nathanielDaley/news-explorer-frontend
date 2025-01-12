@@ -1,5 +1,5 @@
 .app {
-  background-color: rgb(250, 157, 103);
+  background-color: rgb(243, 243, 243);
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -7,11 +7,15 @@
 }
 
 .app__content {
-  max-width: 1360px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.test {
+  width: 100%;
 }
