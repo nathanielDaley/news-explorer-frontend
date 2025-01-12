@@ -9,9 +9,11 @@
   box-shadow: 0px -1px 0px 0px rgba(255, 255, 255, 0.2) inset;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .header__title {
+  margin: 0;
   padding: 0 0 0 104px;
   font-family: "Roboto Slab", Garamond, "Times New Roman";
   font-size: 20px;
