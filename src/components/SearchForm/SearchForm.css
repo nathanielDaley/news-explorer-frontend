@@ -1,0 +1,40 @@
+.search-form {
+  width: 100%;
+  height: 576px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../../assets/search-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.search-form__title {
+  width: 608px;
+  margin: 0;
+  padding: 0 0 32px 0;
+  font-family: "Roboto Slab", Garamond, "Times New Roman";
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 64px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgb(255, 255, 255);
+}
+
+.search-form__description {
+  width: 608px;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgb(255, 255, 255);
+}

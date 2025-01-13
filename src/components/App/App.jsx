@@ -1,4 +1,5 @@
 import Header from "../Header/Header";
+import SearchForm from "../SearchForm/SearchForm";
 import background from "../../assets/search-background.jpg";
 
 import "./App.css";
@@ -9,7 +10,7 @@ function App() {
       <div className="app__content">
         <div className="app__container">
           <Header></Header>
-          <img src={background} alt="test" className="test" />
+          <SearchForm></SearchForm>
         </div>
       </div>
     </div>
