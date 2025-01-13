@@ -4,7 +4,7 @@ import logoutIcon from "../../assets/logout.svg";
 function Navigation() {
   return (
     <div className="navigation">
-      <div className="navigation__link navigation__color_primary navigation__link_highlighted_primary_color ">
+      <div className="navigation__link navigation__color_primary navigation__link_highlighted_primary_color navigation__link_disabled">
         Home
       </div>
       <div className="navigation__link navigation__color_secondary navigation__link_highlighted_secondary_color navigation__link_hidden">

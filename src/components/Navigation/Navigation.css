@@ -21,6 +21,11 @@
   text-decoration-skip-ink: none;
   display: inline-flex;
   align-items: center;
+  cursor: pointer;
+}
+
+.navigation__link_disabled {
+  cursor: default;
 }
 
 .navigation__color_primary {
@@ -60,6 +65,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .navigation__sign-in-button_hidden {
@@ -82,6 +88,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .navigation__button_primary_color {
