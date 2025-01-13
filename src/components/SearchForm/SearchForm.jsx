@@ -16,7 +16,7 @@ function SearchForm() {
             className="search-form__input"
             id="search-form-input"
             name="search"
-            placeholder="Nature"
+            placeholder="example"
             required
           />
           <button className="search-form__button">Search</button>
