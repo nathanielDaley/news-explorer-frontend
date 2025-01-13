@@ -22,5 +22,12 @@
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+}
+
+.header__color_primary {
   color: rgba(255, 255, 255, 1);
+}
+
+.header__color_secondary {
+  color: rgba(26, 27, 34, 1);
 }

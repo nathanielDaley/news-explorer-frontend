@@ -5,7 +5,7 @@ import "./Header.css";
 function Header() {
   return (
     <div className="header">
-      <div className="header__title">NewsExplorer</div>
+      <div className="header__title header__color_primary">NewsExplorer</div>
       <Navigation></Navigation>
     </div>
   );
