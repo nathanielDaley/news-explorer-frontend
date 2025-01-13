@@ -32,7 +32,7 @@
   border-bottom: 3px solid rgba(255, 255, 255, 1);
 }
 
-.navigation__button {
+.navigation__sign-in-button {
   box-sizing: border-box;
   width: 176px;
   height: 48px;
@@ -50,4 +50,36 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+
+.navigation__sign-in-button_hidden {
+  display: none;
+}
+
+.navigation__logout-button {
+  padding: 0 17px;
+  box-sizing: border-box;
+  height: 48px;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(255, 255, 255, 1);
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-radius: 100px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation__logout-button_hidden {
+  display: none;
+}
+
+.navigation__logout-icon {
+  padding: 0 0 0 15px;
 }
