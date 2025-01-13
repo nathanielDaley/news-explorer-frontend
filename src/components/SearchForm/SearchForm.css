@@ -50,7 +50,7 @@
   padding: 21px;
   margin: 88px 0 0;
   border-radius: 100px;
-  border: none;
+  border: 1px solid rgba(209, 210, 214, 1);
   color: rgba(26, 27, 34, 1);
 }
 
