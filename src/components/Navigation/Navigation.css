@@ -1,11 +1,17 @@
 .navigation {
+  box-sizing: border-box;
+  height: 100%;
   margin: 0;
   padding: 0 104px 0 0;
   display: flex;
-  gap: 42px;
+  align-items: center;
+  gap: 32px;
 }
 
 .navigation__link {
+  box-sizing: border-box;
+  height: 100%;
+  padding: 0 8px;
   font-family: Roboto, Arial, sans-serif;
   font-size: 18px;
   font-weight: 500;
@@ -18,7 +24,16 @@
   align-items: center;
 }
 
+.navigation__link_hidden {
+  display: none;
+}
+
+.navigation__link_selected {
+  border-bottom: 3px solid rgba(255, 255, 255, 1);
+}
+
 .navigation__button {
+  box-sizing: border-box;
   width: 176px;
   height: 48px;
   font-family: Roboto, Arial, sans-serif;
