@@ -10,6 +10,17 @@ function SearchForm() {
           Find the latest news on any topic and save them in your personal
           account.
         </h2>
+        <div className="search-form__input-container">
+          <input
+            type="text"
+            className="search-form__input"
+            id="search-form-input"
+            name="search"
+            placeholder="Nature"
+            required
+          />
+          <button className="search-form__button">Search</button>
+        </div>
       </form>
     </section>
   );

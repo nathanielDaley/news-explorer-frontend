@@ -1,4 +1,5 @@
 .header {
+  box-sizing: border-box;
   position: absolute;
   width: 100vw;
   max-width: 1440px;
@@ -13,6 +14,7 @@
 }
 
 .header__title {
+  box-sizing: border-box;
   margin: 0;
   padding: 0 0 0 104px;
   font-family: "Roboto Slab", Garamond, "Times New Roman";
