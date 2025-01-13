@@ -4,12 +4,16 @@ import logoutIcon from "../../assets/logout.svg";
 function Navigation() {
   return (
     <div className="navigation">
-      <div className="navigation__link navigation__link_selected">Home</div>
-      <div className="navigation__link navigation__link_hidden">
+      <div className="navigation__link navigation__color_primary navigation__link_highlighted_primary_color ">
+        Home
+      </div>
+      <div className="navigation__link navigation__color_secondary navigation__link_highlighted_secondary_color navigation__link_hidden">
         Saved articles
       </div>
-      <button className="navigation__sign-in-button">Sign in</button>
-      <button className="navigation__logout-button navigation__logout-button_hidden">
+      <button className="navigation__sign-in-button navigation__button_primary_color">
+        Sign in
+      </button>
+      <button className="navigation__logout-button navigation__button_secondary_color navigation__button_hidden">
         Elise
         <img
           src={logoutIcon}

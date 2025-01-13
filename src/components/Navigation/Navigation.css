@@ -19,17 +19,28 @@
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: rgba(255, 255, 255, 1);
   display: inline-flex;
   align-items: center;
+}
+
+.navigation__color_primary {
+  color: rgba(255, 255, 255, 1);
+}
+
+.navigation__color_secondary {
+  color: rgba(26, 27, 34, 1);
 }
 
 .navigation__link_hidden {
   display: none;
 }
 
-.navigation__link_selected {
+.navigation__link_highlighted_primary_color {
   border-bottom: 3px solid rgba(255, 255, 255, 1);
+}
+
+.navigation__link_highlighted_secondary_color {
+  border-bottom: 3px solid rgba(26, 27, 34, 1);
 }
 
 .navigation__sign-in-button {
@@ -43,7 +54,6 @@
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: rgba(255, 255, 255, 1);
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 1);
   border-radius: 100px;
@@ -67,16 +77,24 @@
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: rgba(255, 255, 255, 1);
   background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 1);
   border-radius: 100px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
 }
 
-.navigation__logout-button_hidden {
+.navigation__button_primary_color {
+  border: 1px solid rgba(255, 255, 255, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.navigation__button_secondary_color {
+  border: 1px solid rgba(26, 27, 34, 1);
+  color: rgba(26, 27, 34, 1);
+}
+
+.navigation__button_hidden {
   display: none;
 }
 
