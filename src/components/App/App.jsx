@@ -1,6 +1,6 @@
 import Header from "../Header/Header";
 import SearchForm from "../SearchForm/SearchForm";
-import background from "../../assets/search-background.jpg";
+import Footer from "../Footer/Footer";
 
 import "./App.css";
 
@@ -12,6 +12,7 @@ function App() {
           <Header></Header>
           <SearchForm></SearchForm>
         </div>
+        <Footer></Footer>
       </div>
     </div>
   );
