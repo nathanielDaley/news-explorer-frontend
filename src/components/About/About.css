@@ -1,0 +1,37 @@
+.about {
+  height: 493px;
+  position: relative;
+  margin: 0;
+  padding: 131px 216px 0 624px;
+  display: flex;
+}
+
+.about__image {
+  position: absolute;
+  width: 464px;
+  height: 464px;
+  border-radius: 50%;
+  left: 104px;
+  top: 80px;
+}
+
+.about__title {
+  font-family: Roboto Slab, Garamond, "Times New Roman";
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 46px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(26, 27, 34, 1);
+}
+
+.about__description {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
