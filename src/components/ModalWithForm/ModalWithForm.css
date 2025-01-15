@@ -1,0 +1,114 @@
+.modal-with-form {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0.4s, opacity 0.4s linear;
+}
+
+.modal-with-form__opened {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+.modal-with-form__content {
+  box-sizing: border-box;
+  padding: 34px 36px 28px;
+  max-width: 430px;
+  width: 100%;
+  position: relative;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+}
+
+.modal-with-form__close-button {
+  position: absolute;
+  top: -47px;
+  right: -47px;
+  height: 40px;
+  width: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  opacity: 1;
+  z-index: 1;
+  transition: opacity 0.3s linear;
+}
+
+.modal-with-form__close-button:hover {
+  opacity: 0.5;
+  transition: opacity 0.3s linear;
+}
+
+.modal-with-form__title {
+  margin: 0 0 22px 0;
+  padding: 0;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 28.13px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.modal-with-form__submit-button {
+  margin: 39px 0 0 0;
+  width: 100%;
+  height: 64px;
+  border-radius: 100px;
+  border: none;
+  box-shadow: 0px 5px 15px 0px rgba(14, 26, 57, 0.2);
+  background: rgba(47, 113, 229, 1);
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+  transition: linear 0.2s background-color;
+}
+
+.modal-with-form__submit-button:hover {
+  background-color: rgb(0, 82, 224);
+  transition: linear 0.2s background-color;
+}
+
+.modal-with-form__alternate-section {
+  font-family: Inter, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.94px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.modal-with-form__alternate-button {
+  margin: 0;
+  padding: 16px 0 0 0;
+  background-color: transparent;
+  border: none;
+  color: rgba(47, 113, 229, 1);
+  cursor: pointer;
+  transition: linear 0.2s color;
+}
+
+.modal-with-form__alternate-button:hover {
+  color: rgb(0, 82, 224);
+  transition: linear 0.2s color;
+}
