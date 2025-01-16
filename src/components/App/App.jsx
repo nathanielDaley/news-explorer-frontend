@@ -2,7 +2,7 @@ import Header from "../Header/Header";
 import SearchForm from "../SearchForm/SearchForm";
 import About from "../About/About";
 import Footer from "../Footer/Footer";
-import ModalWithForm from "../ModalWithForm/ModalWithForm";
+import LoginModal from "../LoginModal/LoginModal";
 
 import "./App.css";
 
@@ -17,7 +17,7 @@ function App() {
         </div>
         <Footer></Footer>
       </div>
-      <ModalWithForm></ModalWithForm>
+      <LoginModal></LoginModal>
     </div>
   );
 }
