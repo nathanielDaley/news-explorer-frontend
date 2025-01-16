@@ -2,11 +2,13 @@ import "./ModalWithForm.css";
 
 import closeIcon from "../../assets/back.svg";
 
-function ModalWithForm({ children }) {
+function ModalWithForm({ children, title, buttonText, altButtonText, isOpen }) {
   return (
-    <div className="modal-with-form">
+    <div
+      className={`modal-with-form${isOpen ? " modal-with-form__opened" : ""}`}
+    >
       <div className="modal-with-form__content">
-        <h3 className="modal-with-form__title">Sign in</h3>
+        <h3 className="modal-with-form__title">{title}</h3>
         <button className="modal-with-form__close-button">
           <img
             src={closeIcon}
@@ -16,11 +18,13 @@ function ModalWithForm({ children }) {
         </button>
         <form className="modal-with-form__form">
           {children}
-          <button className="modal-with-form__submit-button">Sign in</button>
+          <button className="modal-with-form__submit-button">
+            {buttonText}
+          </button>
           <div className="modal-with-form__alternate-section">
             or{" "}
             <button className="modal-with-form__alternate-button">
-              Sign up
+              {altButtonText}
             </button>
           </div>
         </form>
