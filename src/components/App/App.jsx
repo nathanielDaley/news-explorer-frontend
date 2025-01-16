@@ -5,6 +5,7 @@ import Footer from "../Footer/Footer";
 import LoginModal from "../LoginModal/LoginModal";
 
 import "./App.css";
+import RegisterModal from "../RegisterModal/RegisterModal";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Footer></Footer>
       </div>
       <LoginModal></LoginModal>
+      <RegisterModal></RegisterModal>
     </div>
   );
 }

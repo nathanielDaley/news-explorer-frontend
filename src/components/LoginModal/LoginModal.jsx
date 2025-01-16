@@ -18,14 +18,14 @@ function LoginModal() {
           required
         />
       </label>
-      <label htmlFor="register-password" className="login-modal__label">
+      <label htmlFor="login-password" className="login-modal__label">
         Password
         <input
           type="password"
           className="login-modal__input"
-          id="register-password"
+          id="login-password"
           name="password"
-          placeholder="Password"
+          placeholder="Enter password"
           value=""
           onChange=""
           required

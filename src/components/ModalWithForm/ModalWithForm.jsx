@@ -4,7 +4,7 @@ import closeIcon from "../../assets/back.svg";
 
 function ModalWithForm({ children }) {
   return (
-    <div className="modal-with-form modal-with-form__opened">
+    <div className="modal-with-form">
       <div className="modal-with-form__content">
         <h3 className="modal-with-form__title">Sign in</h3>
         <button className="modal-with-form__close-button">
