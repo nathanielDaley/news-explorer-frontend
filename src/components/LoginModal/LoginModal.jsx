@@ -1,15 +1,14 @@
 import "./LoginModal.css";
 
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
-import {
-  LOGIN_MODAL_TITLE,
-  LOGIN_MODAL_BUTTON_TEXT,
-  LOGIN_MODAL_ALTERNATE_BUTTON_TEXT,
-  LOGIN_MODAL_EMAIL_INPUT_LABEL_TEXT,
-  LOGIN_MODAL_EMAIL_INPUT_PLACEHOLDER_TEXT,
-  LOGIN_MODAL_PASSWORD_INPUT_LABEL_TEXT,
-  LOGIN_MODAL_PASSWORD_INPUT_PLACEHOLDER_TEXT,
-} from "../../utils/constants";
+
+const LOGIN_MODAL_TITLE = "Sign in";
+const LOGIN_MODAL_BUTTON_TEXT = "Sign in";
+const LOGIN_MODAL_ALTERNATE_BUTTON_TEXT = "Sign up";
+const LOGIN_MODAL_EMAIL_INPUT_LABEL_TEXT = "Email";
+const LOGIN_MODAL_EMAIL_INPUT_PLACEHOLDER_TEXT = "Enter email";
+const LOGIN_MODAL_PASSWORD_INPUT_LABEL_TEXT = "Password";
+const LOGIN_MODAL_PASSWORD_INPUT_PLACEHOLDER_TEXT = "Enter password";
 
 function LoginModal({ activeModal }) {
   return (
