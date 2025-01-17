@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Header from "../Header/Header";
 import Main from "../Main/Main";
@@ -8,8 +8,18 @@ import RegisterModal from "../RegisterModal/RegisterModal";
 
 import "./App.css";
 
+import { getNewsArticles } from "../../utils/newsApi";
+
 function App() {
   const [activeModal, setActiveModal] = useState("");
+  const [newsArticles, setNewsArticles] = useState([]);
+
+  useEffect(() => {
+    console.log(getNewsArticles());
+    setNewsArticles(getNewsArticles());
+
+    console.log(newsArticles);
+  }, []);
 
   return (
     <div className="app">
