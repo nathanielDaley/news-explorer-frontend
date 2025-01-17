@@ -1,8 +1,7 @@
 import { useState } from "react";
 
 import Header from "../Header/Header";
-import SearchForm from "../SearchForm/SearchForm";
-import About from "../About/About";
+import Main from "../Main/Main";
 import Footer from "../Footer/Footer";
 import LoginModal from "../LoginModal/LoginModal";
 import RegisterModal from "../RegisterModal/RegisterModal";
@@ -17,8 +16,7 @@ function App() {
       <div className="app__content">
         <div className="app__container">
           <Header></Header>
-          <SearchForm></SearchForm>
-          <About></About>
+          <Main></Main>
         </div>
         <Footer></Footer>
       </div>
