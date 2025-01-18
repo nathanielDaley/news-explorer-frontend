@@ -15,10 +15,7 @@ function App() {
   const [newsArticles, setNewsArticles] = useState([]);
 
   useEffect(() => {
-    console.log(getNewsArticles());
     setNewsArticles(getNewsArticles());
-
-    console.log(newsArticles);
   }, []);
 
   return (
