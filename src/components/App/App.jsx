@@ -9,6 +9,7 @@ import RegisterModal from "../RegisterModal/RegisterModal";
 import "./App.css";
 
 import { getNewsArticles } from "../../utils/newsApi";
+import Profile from "../Profile/Profile";
 
 function App() {
   const [activeModal, setActiveModal] = useState("");
@@ -24,6 +25,7 @@ function App() {
         <div className="app__container">
           <Header></Header>
           <Main newsArticles={newsArticles}></Main>
+          <Profile newsArticles={newsArticles}></Profile>
         </div>
         <Footer></Footer>
       </div>

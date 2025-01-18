@@ -7,10 +7,17 @@
   transform: translateX(-50%);
   height: 80px;
   margin: 0;
-  box-shadow: 0px -1px 0px 0px rgba(255, 255, 255, 0.2) inset;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.header__shadow_primary {
+  box-shadow: 0px -1px 0px 0px rgba(209, 210, 214, 1) inset;
+}
+
+.header__shadow_secondary {
+  box-shadow: 0px -1px 0px 0px rgba(255, 255, 255, 0.2) inset;
 }
 
 .header__title {
@@ -27,9 +34,9 @@
 }
 
 .header__color_primary {
-  color: rgba(255, 255, 255, 1);
+  color: rgba(26, 27, 34, 1);
 }
 
 .header__color_secondary {
-  color: rgba(26, 27, 34, 1);
+  color: rgba(255, 255, 255, 1);
 }
