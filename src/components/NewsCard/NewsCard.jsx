@@ -3,7 +3,13 @@ import "./NewsCard.css";
 import savedIcon from "../../assets/saved.svg";
 import unsavedIcon from "../../assets/unsaved.svg";
 
-function NewsCard() {
+function NewsCard({ newsArticle }) {
+  const newsDate = new Date(newsArticle.publishedAt);
+  const dateOptions = { year: "numeric", month: "long", day: "numeric" };
+  const formattedDate = new Intl.DateTimeFormat("en-US", dateOptions).format(
+    newsDate
+  );
+
   return (
     <article className="news-card">
       <button type="button" className="news-card__save-button">
@@ -24,19 +30,10 @@ function NewsCard() {
         className="news-card__image"
       />
       <div className="news-card__content">
-        <div className="news-card__date">November 4, 2020</div>
-        <div className="news-card__title">
-          Everyone Needs a Special 'Sit Spot' in Nature ar aw rwra rawraw rawr
-          wa wr
-        </div>
-        <div className="news-card__description">
-          Ever since I read Richard Louv's influential book, "Last Child in the
-          Woods," the idea of having a special "sit spot" has stuck with me.
-          This advice, which Louv attributes to nature educator Jon Young, is
-          for both adults and children to find
-          asdiopairoiaopwrtiojwtoijopietjoijt
-        </div>
-        <div className="news-article__source">TreeHugger</div>
+        <div className="news-card__date">{formattedDate}</div>
+        <div className="news-card__title">{newsArticle.title}</div>
+        <div className="news-card__description">{newsArticle.description}</div>
+        <div className="news-card__source">{newsArticle.source.name}</div>
       </div>
     </article>
   );

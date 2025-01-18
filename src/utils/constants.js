@@ -1,5 +1,6 @@
 const constantNewsArticles = [
   {
+    _id: 1,
     source: {
       id: "the-washington-post",
       name: "The Washington Post",
@@ -17,6 +18,7 @@ const constantNewsArticles = [
       "President-elect Donald Trumps long-standing threats to place conditions on California wildfire aid are gaining traction with Republicans, looming over the governments response to the devastation in L… [+9628 chars]",
   },
   {
+    _id: 2,
     source: {
       id: null,
       name: "[Removed]",
@@ -30,6 +32,7 @@ const constantNewsArticles = [
     content: "[Removed]",
   },
   {
+    _id: 3,
     source: {
       id: "abc-news",
       name: "ABC News",
@@ -44,6 +47,7 @@ const constantNewsArticles = [
     content: null,
   },
   {
+    _id: 4,
     source: {
       id: null,
       name: "Investor's Business Daily",
@@ -60,6 +64,7 @@ const constantNewsArticles = [
       "Dow Jones futures were little changed overnight, along with S&amp;P 500 futures and Nasdaq futures. Nvidia chipmaker Taiwan Semiconductor (TSM), UnitedHealth (UNH), Bank of America (BAC) and Morgan S… [+6169 chars]",
   },
   {
+    _id: 5,
     source: {
       id: null,
       name: "NBC Southern California",
@@ -76,6 +81,7 @@ const constantNewsArticles = [
     content: null,
   },
   {
+    _id: 6,
     source: {
       id: null,
       name: "KTLA Los Angeles",
@@ -93,6 +99,7 @@ const constantNewsArticles = [
       "(KTLA) – State Farm, Californias largest insurer, announced on Wednesday that it will offer renewals to residential policyholders affected by the deadly wildfires across Los Angeles County. The compa… [+1642 chars]",
   },
   {
+    _id: 7,
     source: {
       id: "associated-press",
       name: "Associated Press",
@@ -110,6 +117,7 @@ const constantNewsArticles = [
       "WASHINGTON (AP) One by one, all the president-elect s men, and women, are falling into place in his Cabinet.\r\nWhile Defense Secretary pick Pete Hegseths nomination was teetering toward collapse just … [+6226 chars]",
   },
   {
+    _id: 8,
     source: {
       id: null,
       name: "BBC News",
@@ -126,6 +134,7 @@ const constantNewsArticles = [
       "Israel and Hamas have agreed a deal which could halt the war in Gaza and see the release of Israeli hostages and Palestinian prisoners, the US and mediators Qatar have said.\r\nIt would be the most dra… [+5495 chars]",
   },
   {
+    _id: 9,
     source: {
       id: null,
       name: "Deadline",
@@ -143,6 +152,7 @@ const constantNewsArticles = [
       "Carrie Underwood will be joined by performers including Kid Rock, the Village People, Billy Ray Cyrus, Lee Greenwood, Rascal Flatts, Jason Aldean and more over the weekend and Monday as part of Donal… [+2312 chars]",
   },
   {
+    _id: 10,
     source: {
       id: "politico",
       name: "Politico",
@@ -159,6 +169,7 @@ const constantNewsArticles = [
       "It was a stark contrast from the fireworks that Trumps Defense secretary nominee, Pete Hegseth, faced in his contentious hearing Tuesday. And it set the stage for several hours of questions Rubio fac… [+2430 chars]",
   },
   {
+    _id: 11,
     source: {
       id: null,
       name: "MinnPost",
@@ -176,6 +187,7 @@ const constantNewsArticles = [
       "Daily Newsletter | MinnPost's top stories delivered to your inbox Monday through Saturday.\r\nA brief vignette at the Minnesota State Capitol Wednesday demonstrated that nothing is routine this year.\r\n… [+1400 chars]",
   },
   {
+    _id: 12,
     source: {
       id: null,
       name: "Variety",
@@ -193,6 +205,7 @@ const constantNewsArticles = [
       "Universal Music Group has posted a fiery response to Drake’s lawsuit around Kendrick Lamar’s brutal diss track, “Not Like Us,” in which he accuses the company — his label for more than a decade — of … [+2862 chars]",
   },
   {
+    _id: 13,
     source: {
       id: "cnn",
       name: "CNN",
@@ -210,6 +223,7 @@ const constantNewsArticles = [
       "Sign up for CNNs Eat, But Better: Mediterranean Style. Our eight-part guide shows you a delicious expert-backed eating lifestyle that will boost your health for life.\r\nReducing your red meat consumpt… [+4610 chars]",
   },
   {
+    _id: 14,
     source: {
       id: "politico",
       name: "Politico",
@@ -227,6 +241,7 @@ const constantNewsArticles = [
       "It all amounted to signs that Democrats view Patel a polarizing MAGA loyalist who served in Trumps first administration as an easier target than Bondi, who seems to be on a glide path to confirmation… [+4204 chars]",
   },
   {
+    _id: 15,
     source: {
       id: null,
       name: "IndieWire",
@@ -244,6 +259,7 @@ const constantNewsArticles = [
       "Despite having to postpone its announcement due to the turmoil currently being faced in Los Angeles as a result of the Southern California wildfires, the Writers Guild of America has now released its… [+11360 chars]",
   },
   {
+    _id: 16,
     source: {
       id: "associated-press",
       name: "Associated Press",
@@ -260,6 +276,7 @@ const constantNewsArticles = [
       "U.S. regulators on Wednesday banned the dye called Red 3 from the nations food supply, nearly 35 years after it was barred from cosmetics because of potential cancer risk.\r\nFood and Drug Administrati… [+5182 chars]",
   },
   {
+    _id: 17,
     source: {
       id: "techcrunch",
       name: "TechCrunch",
@@ -277,6 +294,7 @@ const constantNewsArticles = [
       "François Chollet, an influential AI researcher, is launching a new startup that aims to build frontier AI systems with novel designs. \r\nThe startup, Ndea, will consist of an AI research and science l… [+3497 chars]",
   },
   {
+    _id: 18,
     source: {
       id: null,
       name: "Footballscoop.com",
@@ -293,6 +311,7 @@ const constantNewsArticles = [
       "We're closing in on 48 hours since the Dallas Cowboys job opened and so far the only name confirmed to have spoken with the club is Deion Sanders. \r\nThis, it turns out, is by design.\r\nJane Slater rep… [+2526 chars]",
   },
   {
+    _id: 19,
     source: {
       id: null,
       name: "The Conversation Africa",
@@ -309,6 +328,7 @@ const constantNewsArticles = [
       "Its the start of another year and the body mass index (BMI) is being criticised again. This time a Lancet-commissioned group of experts is denouncing it as a diagnostic tool for obesity. They say tha… [+5689 chars]",
   },
   {
+    _id: 20,
     source: {
       id: "techcrunch",
       name: "TechCrunch",

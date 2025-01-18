@@ -121,7 +121,7 @@
   -webkit-box-orient: vertical;
 }
 
-.news-article__source {
+.news-card__source {
   margin: 0;
   padding: 0;
   font-family: "Roboto Slab", Garamond, "Times New Roman";

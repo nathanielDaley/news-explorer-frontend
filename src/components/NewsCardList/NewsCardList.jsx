@@ -7,7 +7,7 @@ function NewsCardList({ newsArticles }) {
       <h2 className="news-card-list__title">Search results</h2>
       <div className="news-card-list__card-list">
         {newsArticles.map((item) => (
-          <NewsCard></NewsCard>
+          <NewsCard key={item._id} newsArticle={item}></NewsCard>
         ))}
       </div>
       <button className="news-card-list__show-more-button">Show more</button>
