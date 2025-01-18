@@ -325,4 +325,4 @@ const constantNewsArticles = [
       "More good news for those looking to exit Meta’s social app ecosystem in favor of a more open alternative: An independent developer is building a photo-sharing app for Bluesky called Flashes. The soon… [+3795 chars]",
   },
 ];
-export { newsApiKey, constantNewsArticles };
+export { constantNewsArticles };
