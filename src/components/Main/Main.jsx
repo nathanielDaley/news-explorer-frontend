@@ -4,11 +4,11 @@ import SearchForm from "../SearchForm/SearchForm";
 import About from "../About/About";
 import NewsCardList from "../NewsCardList/NewsCardList";
 
-function Main() {
+function Main({ newsArticles }) {
   return (
     <main className="main">
       <SearchForm></SearchForm>
-      <NewsCardList></NewsCardList>
+      <NewsCardList newsArticles={newsArticles}></NewsCardList>
       <About></About>
     </main>
   );

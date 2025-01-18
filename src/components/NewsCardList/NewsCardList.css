@@ -19,8 +19,9 @@
 }
 
 .news-card-list__card-list {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 16px 16px;
 }
 
 .news-card-list__show-more-button {

@@ -26,7 +26,7 @@ function App() {
       <div className="app__content">
         <div className="app__container">
           <Header></Header>
-          <Main></Main>
+          <Main newsArticles={newsArticles}></Main>
         </div>
         <Footer></Footer>
       </div>
