@@ -25,8 +25,12 @@ function NewsCard({ newsArticle }) {
         />
       </button>
       <img
-        src="https://techcrunch.com/wp-content/uploads/2023/08/bluesky-004.jpg?resize=1200,675"
-        alt="Bluesky article image"
+        src={
+          newsArticle.urlToImage
+            ? newsArticle.urlToImage
+            : "https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=2029&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        }
+        alt="article image"
         className="news-card__image"
       />
       <div className="news-card__content">
