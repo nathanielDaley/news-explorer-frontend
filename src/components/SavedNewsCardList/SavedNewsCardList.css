@@ -4,3 +4,9 @@
   padding: 80px 104px;
   background-color: rgba(245, 246, 247, 1);
 }
+
+.saved-news-card-list__card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 16px 16px;
+}

@@ -1,11 +1,15 @@
-import NewsCardList from "../NewsCardList/NewsCardList";
+import NewsCard from "../NewsCard/NewsCard";
 import "./MainNewsCardList.css";
 
 function MainNewsCardList({ newsArticles }) {
   return (
     <section className="main-news-card-list">
       <h2 className="main-news-card-list__title">Search results</h2>
-      <NewsCardList newsArticles={newsArticles}></NewsCardList>
+      <div className="main-news-card-list__card-list">
+        {newsArticles.map((item) => (
+          <NewsCard key={item._id} newsArticle={item}></NewsCard>
+        ))}
+      </div>
       <button className="main-news-card-list__show-more-button">
         Show more
       </button>

@@ -1,10 +1,14 @@
-import NewsCardList from "../NewsCardList/NewsCardList";
+import NewsCard from "../NewsCard/NewsCard";
 import "./SavedNewsCardList.css";
 
 function SavedNewsCardList({ newsArticles }) {
   return (
     <section className="saved-news-card-list">
-      <NewsCardList newsArticles={newsArticles}></NewsCardList>
+      <div className="saved-news-card-list__card-list">
+        {newsArticles.map((item) => (
+          <NewsCard key={item._id} newsArticle={item}></NewsCard>
+        ))}
+      </div>
     </section>
   );
 }
