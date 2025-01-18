@@ -1,4 +1,4 @@
-import NewsCardList from "../NewsCardList/NewsCardList";
+import SavedNewsCardList from "../SavedNewsCardList/SavedNewsCardList";
 import "./Profile.css";
 
 function Profile({ newsArticles }) {
@@ -16,7 +16,7 @@ function Profile({ newsArticles }) {
           </span>
         </p>
       </div>
-      <NewsCardList newsArticles={newsArticles}></NewsCardList>
+      <SavedNewsCardList newsArticles={newsArticles}></SavedNewsCardList>
     </main>
   );
 }
