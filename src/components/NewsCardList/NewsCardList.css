@@ -24,9 +24,10 @@
 }
 
 .news-card-list__show-more-button {
+  display: block;
   width: 288px;
   height: 64px;
-  margin: 0;
+  margin: 64px auto 0;
   padding: 0;
   border-radius: 80px;
   border: none;
