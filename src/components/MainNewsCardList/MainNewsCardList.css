@@ -41,12 +41,12 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   cursor: pointer;
-  box-shadow: none;
-  transition: linear 0.3s box-shadow;
+  opacity: 1;
+  transition: linear 0.3s background-color, linear 0.3s opacity;
 }
 
 .main-news-card-list__show-more-button:hover {
-  border-color: rgba(0, 0, 0, 0.15);
-  box-shadow: rgba(0, 0, 0, 0.2) 0 4px 12px;
-  transition: linear 0.3s box-shadow;
+  background-color: rgba(232, 232, 232, 1);
+  opacity: 0.9;
+  transition: linear 0.3s background-color, linear 0.3s opacity;
 }
