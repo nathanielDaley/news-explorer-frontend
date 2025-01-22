@@ -15,6 +15,10 @@
   cursor: pointer;
 }
 
+.main-news-card__card-link {
+  text-decoration: none;
+}
+
 .main-news-card__save-button {
   box-sizing: border-box;
   position: absolute;
