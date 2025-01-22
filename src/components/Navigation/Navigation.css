@@ -21,6 +21,8 @@
   text-decoration-skip-ink: none;
   display: inline-flex;
   align-items: center;
+  border: none;
+  background-color: transparent;
   cursor: pointer;
 }
 

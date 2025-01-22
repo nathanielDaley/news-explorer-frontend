@@ -8,7 +8,9 @@ function Navigation({ handleLoginClick }) {
 
   return (
     <div className="navigation">
-      <div
+      <button
+        type="button"
+        disabled={pathname === "/" ? true : false}
         className={`navigation__link ${
           pathname === "/"
             ? "navigation__color_primary navigation__link_highlighted_primary_color navigation__link_disabled"
@@ -16,8 +18,10 @@ function Navigation({ handleLoginClick }) {
         }`}
       >
         Home
-      </div>
-      <div
+      </button>
+      <button
+        type="button"
+        disabled={pathname === "/" ? flase : true}
         className={`navigation__link navigation__color_secondary navigation__link_highlighted_secondary_color ${
           pathname === "/"
             ? " navigation__link_hidden"
@@ -25,7 +29,7 @@ function Navigation({ handleLoginClick }) {
         }`}
       >
         Saved articles {pathname}
-      </div>
+      </button>
       <button
         type="button"
         onClick={handleLoginClick}
