@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 import "./Navigation.css";
 import logoutIcon from "../../assets/logout.svg";
@@ -8,28 +8,31 @@ function Navigation({ handleLoginClick }) {
 
   return (
     <div className="navigation">
-      <button
-        type="button"
-        disabled={pathname === "/" ? true : false}
-        className={`navigation__link ${
-          pathname === "/"
-            ? "navigation__color_primary navigation__link_highlighted_primary_color navigation__link_disabled"
-            : "navigation__color_secondary"
-        }`}
+      <NavLink
+        to="/"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? ""
+            : isActive
+            ? "navigation__link navigation__color_primary navigation__link_highlighted_primary_color navigation__link_disabled"
+            : "navigation__link navigation__color_secondary"
+        }
       >
         Home
-      </button>
-      <button
+      </NavLink>
+      <NavLink
         type="button"
-        disabled={pathname === "/" ? flase : true}
-        className={`navigation__link navigation__color_secondary navigation__link_highlighted_secondary_color ${
-          pathname === "/"
-            ? " navigation__link_hidden"
-            : " navigation__link_disabled"
-        }`}
+        to="/profile"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? ""
+            : isActive
+            ? "navigation__link navigation__color_secondary navigation__link_highlighted_secondary_color navigation__link_disabled"
+            : "navigation__link navigation__color_secondary navigation__link_highlighted_secondary_color navigation__link_hidden"
+        }
       >
         Saved articles {pathname}
-      </button>
+      </NavLink>
       <button
         type="button"
         onClick={handleLoginClick}
