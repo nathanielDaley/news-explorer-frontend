@@ -19,6 +19,18 @@ function App() {
     setActiveModal("");
   };
 
+  const showLoginModalClick = (event) => {
+    event.preventDefault();
+
+    setActiveModal("login");
+  };
+
+  const showRegisterModalClick = (event) => {
+    event.preventDefault();
+
+    setActiveModal("register");
+  };
+
   useEffect(() => {
     setNewsArticles(getNewsArticles());
   }, []);
@@ -34,7 +46,6 @@ function App() {
     };
 
     const handleModalOutsideClick = (event) => {
-      console.log(event);
       if (event.target.classList.contains("modal-with-form_opened")) {
         closeActiveModal();
       }
@@ -54,7 +65,7 @@ function App() {
     <div className="app">
       <div className="app__content">
         <div className="app__container">
-          <Header></Header>
+          <Header handleLoginClick={showLoginModalClick}></Header>
           <Main newsArticles={newsArticles}></Main>
           <Profile newsArticles={newsArticles}></Profile>
         </div>
@@ -63,10 +74,12 @@ function App() {
       <LoginModal
         activeModal={activeModal}
         handleCloseClick={closeActiveModal}
+        handleRegisterClick={showRegisterModalClick}
       ></LoginModal>
       <RegisterModal
         activeModal={activeModal}
         handleCloseClick={closeActiveModal}
+        handleLoginClick={showLoginModalClick}
       ></RegisterModal>
     </div>
   );

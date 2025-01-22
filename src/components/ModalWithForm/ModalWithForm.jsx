@@ -9,6 +9,7 @@ function ModalWithForm({
   altButtonText,
   isOpen,
   handleCloseClick,
+  handleAlternativeButtonClick,
 }) {
   return (
     <div
@@ -34,7 +35,11 @@ function ModalWithForm({
           </button>
           <div className="modal-with-form__alternate-section">
             or{" "}
-            <button className="modal-with-form__alternate-button">
+            <button
+              type="button"
+              onClick={handleAlternativeButtonClick}
+              className="modal-with-form__alternate-button"
+            >
               {altButtonText}
             </button>
           </div>
