@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 import "./Footer.css";
 
 import gitHubIcon from "../../assets/github.svg";
@@ -22,14 +24,14 @@ function Footer() {
         </a>
       </div>
       <div className="footer__links">
-        <a href="#" className="footer__link footer__link_color">
+        <NavLink to="/" className="footer__link footer__link_color">
           <span
             data-content="Home"
             aria-hidden="true"
             className="footer__link-transition"
           ></span>
           Home
-        </a>
+        </NavLink>
         <a
           href="https://tripleten.com/"
           target="_blank"
