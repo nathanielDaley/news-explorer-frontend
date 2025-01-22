@@ -1,5 +1,7 @@
 import "./RegisterModal.css";
 
+import { useForm } from "../../hooks/useForm";
+
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
 const REGISTER_MODAL_TITLE = "Sign up";
@@ -13,6 +15,8 @@ const REGISTER_MODAL_USERNAME_INPUT_LABEL_TEXT = "Username";
 const REGISTER_MODAL_USERNAME_INPUT_PLACEHOLDER_TEXT = "Enter your username";
 
 function RegisterModal({ activeModal, handleCloseClick, handleLoginClick }) {
+  const { values, handleChange, setValues } = useForm({});
+
   return (
     <ModalWithForm
       title={REGISTER_MODAL_TITLE}
@@ -30,8 +34,8 @@ function RegisterModal({ activeModal, handleCloseClick, handleLoginClick }) {
           id="register-email"
           name="email"
           placeholder={REGISTER_MODAL_EMAIL_INPUT_PLACEHOLDER_TEXT}
-          value=""
-          onChange=""
+          value={values.email || ""}
+          onChange={handleChange}
           required
         />
       </label>
@@ -43,8 +47,8 @@ function RegisterModal({ activeModal, handleCloseClick, handleLoginClick }) {
           id="register-password"
           name="password"
           placeholder={REGISTER_MODAL_PASSWORD_INPUT_PLACEHOLDER_TEXT}
-          value=""
-          onChange=""
+          value={values.password || ""}
+          onChange={handleChange}
           required
         />
       </label>
@@ -56,8 +60,8 @@ function RegisterModal({ activeModal, handleCloseClick, handleLoginClick }) {
           id="register-username"
           name="username"
           placeholder={REGISTER_MODAL_USERNAME_INPUT_PLACEHOLDER_TEXT}
-          value=""
-          onChange=""
+          value={values.username || ""}
+          onChange={handleChange}
           required
         />
       </label>

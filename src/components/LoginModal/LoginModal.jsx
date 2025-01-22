@@ -1,5 +1,7 @@
 import "./LoginModal.css";
 
+import { useForm } from "../../hooks/useForm";
+
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
 const LOGIN_MODAL_TITLE = "Sign in";
@@ -11,6 +13,7 @@ const LOGIN_MODAL_PASSWORD_INPUT_LABEL_TEXT = "Password";
 const LOGIN_MODAL_PASSWORD_INPUT_PLACEHOLDER_TEXT = "Enter password";
 
 function LoginModal({ activeModal, handleCloseClick, handleRegisterClick }) {
+  const { values, handleChange, setValues } = useForm({});
   return (
     <ModalWithForm
       title={LOGIN_MODAL_TITLE}
@@ -28,8 +31,8 @@ function LoginModal({ activeModal, handleCloseClick, handleRegisterClick }) {
           id="login-email"
           name="email"
           placeholder={LOGIN_MODAL_EMAIL_INPUT_PLACEHOLDER_TEXT}
-          value=""
-          onChange=""
+          value={values.email || ""}
+          onChange={handleChange}
           required
         />
       </label>
@@ -41,8 +44,8 @@ function LoginModal({ activeModal, handleCloseClick, handleRegisterClick }) {
           id="login-password"
           name="password"
           placeholder={LOGIN_MODAL_PASSWORD_INPUT_PLACEHOLDER_TEXT}
-          value=""
-          onChange=""
+          value={values.password || ""}
+          onChange={handleChange}
           required
         />
       </label>
