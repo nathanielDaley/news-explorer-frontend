@@ -11,15 +11,17 @@ function Navigation({ handleLoginClick }) {
       <div
         className={`navigation__link ${
           pathname === "/"
-            ? "navigation__color_primary navigation__link_highlighted_primary_color"
+            ? "navigation__color_primary navigation__link_highlighted_primary_color navigation__link_disabled"
             : "navigation__color_secondary"
-        } navigation__link_disabled`}
+        }`}
       >
         Home
       </div>
       <div
         className={`navigation__link navigation__color_secondary navigation__link_highlighted_secondary_color ${
-          pathname === "/" ? "navigation__link_hidden" : ""
+          pathname === "/"
+            ? " navigation__link_hidden"
+            : " navigation__link_disabled"
         }`}
       >
         Saved articles {pathname}
