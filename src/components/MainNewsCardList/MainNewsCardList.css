@@ -8,7 +8,7 @@
 .main-news-card-list__card-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 16px 16px;
+  gap: 16px 0;
 }
 
 .main-news-card-list__title {
