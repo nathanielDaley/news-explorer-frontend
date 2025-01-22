@@ -10,13 +10,14 @@ const LOGIN_MODAL_EMAIL_INPUT_PLACEHOLDER_TEXT = "Enter email";
 const LOGIN_MODAL_PASSWORD_INPUT_LABEL_TEXT = "Password";
 const LOGIN_MODAL_PASSWORD_INPUT_PLACEHOLDER_TEXT = "Enter password";
 
-function LoginModal({ activeModal }) {
+function LoginModal({ activeModal, handleCloseClick }) {
   return (
     <ModalWithForm
       title={LOGIN_MODAL_TITLE}
       buttonText={LOGIN_MODAL_BUTTON_TEXT}
       altButtonText={LOGIN_MODAL_ALTERNATE_BUTTON_TEXT}
       isOpen={activeModal === "login"}
+      handleCloseClick={handleCloseClick}
     >
       <label htmlFor="login-email" className="login-modal__label">
         {LOGIN_MODAL_EMAIL_INPUT_LABEL_TEXT}

@@ -15,9 +15,40 @@ function App() {
   const [activeModal, setActiveModal] = useState("");
   const [newsArticles, setNewsArticles] = useState([]);
 
+  const closeActiveModal = () => {
+    setActiveModal("");
+  };
+
   useEffect(() => {
     setNewsArticles(getNewsArticles());
   }, []);
+
+  useEffect(() => {
+    if (!activeModal) return; //stops the useEffect from continuing if there is no active modal
+
+    // define functions inside useEffect to not lose the reference on rerendering
+    const handleEscClose = (event) => {
+      if (event.key === "Escape") {
+        closeActiveModal();
+      }
+    };
+
+    const handleModalOutsideClick = (event) => {
+      console.log(event);
+      if (event.target.classList.contains("modal-with-form_opened")) {
+        closeActiveModal();
+      }
+    };
+
+    document.addEventListener("keydown", handleEscClose);
+    document.addEventListener("click", handleModalOutsideClick);
+
+    return () => {
+      //add a clean up function for removing the listener
+      document.removeEventListener("keydown", handleEscClose);
+      document.removeEventListener("click", handleModalOutsideClick);
+    };
+  }, [activeModal]);
 
   return (
     <div className="app">
@@ -29,8 +60,14 @@ function App() {
         </div>
         <Footer></Footer>
       </div>
-      <LoginModal activeModal={activeModal}></LoginModal>
-      <RegisterModal activeModal={activeModal}></RegisterModal>
+      <LoginModal
+        activeModal={activeModal}
+        handleCloseClick={closeActiveModal}
+      ></LoginModal>
+      <RegisterModal
+        activeModal={activeModal}
+        handleCloseClick={closeActiveModal}
+      ></RegisterModal>
     </div>
   );
 }

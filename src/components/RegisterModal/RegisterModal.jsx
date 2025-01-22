@@ -12,13 +12,14 @@ const REGISTER_MODAL_PASSWORD_INPUT_PLACEHOLDER_TEXT = "Enter password";
 const REGISTER_MODAL_USERNAME_INPUT_LABEL_TEXT = "Username";
 const REGISTER_MODAL_USERNAME_INPUT_PLACEHOLDER_TEXT = "Enter your username";
 
-function RegisterModal({ activeModal }) {
+function RegisterModal({ activeModal, handleCloseClick }) {
   return (
     <ModalWithForm
       title={REGISTER_MODAL_TITLE}
       buttonText={REGISTER_MODAL_BUTTON_TEXT}
       altButtonText={REGISTER_MODAL_ALTERNATE_BUTTON_TEXT}
       isOpen={activeModal === "register"}
+      handleCloseClick={handleCloseClick}
     >
       <label htmlFor="register-email" className="register-modal__label">
         {REGISTER_MODAL_EMAIL_INPUT_LABEL_TEXT}
