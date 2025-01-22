@@ -14,6 +14,7 @@ const LOGIN_MODAL_PASSWORD_INPUT_PLACEHOLDER_TEXT = "Enter password";
 
 function LoginModal({ activeModal, handleCloseClick, handleRegisterClick }) {
   const { values, handleChange, setValues } = useForm({});
+
   return (
     <ModalWithForm
       title={LOGIN_MODAL_TITLE}

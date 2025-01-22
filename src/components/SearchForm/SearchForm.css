@@ -51,6 +51,13 @@
   margin: 88px 0 0;
   border-radius: 100px;
   border: 1px solid rgba(209, 210, 214, 1);
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
   color: rgba(26, 27, 34, 1);
 }
 
@@ -62,6 +69,10 @@
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+}
+
+.search-form__input:focus {
+  outline: none;
 }
 
 .search-form__button {

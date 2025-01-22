@@ -1,6 +1,14 @@
 import "./SearchForm.css";
 
+import { useForm } from "../../hooks/useForm";
+
 function SearchForm() {
+  const { values, handleChange, setValues } = useForm({});
+
+  const test = () => {
+    console.log("test");
+  };
+
   return (
     <section className="search-form">
       <div className="search-form__background-cover"></div>
@@ -15,8 +23,10 @@ function SearchForm() {
             type="text"
             className="search-form__input"
             id="search-form-input"
-            name="search"
-            placeholder="example"
+            name="term"
+            placeholder="Enter topic"
+            value={values.term || ""}
+            onChange={handleChange}
             required
           />
           <button className="search-form__button">Search</button>
