@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Routes, Route } from "react-router-dom";
 
 import Header from "../Header/Header";
 import Main from "../Main/Main";
@@ -66,8 +67,16 @@ function App() {
       <div className="app__content">
         <div className="app__container">
           <Header handleLoginClick={showLoginModalClick}></Header>
-          <Main newsArticles={newsArticles}></Main>
-          <Profile newsArticles={newsArticles}></Profile>
+          <Routes>
+            <Route
+              path="/"
+              element={<Main newsArticles={newsArticles}></Main>}
+            />
+            <Route
+              path="/profile"
+              element={<Profile newsArticles={newsArticles}></Profile>}
+            />
+          </Routes>
         </div>
         <Footer></Footer>
       </div>

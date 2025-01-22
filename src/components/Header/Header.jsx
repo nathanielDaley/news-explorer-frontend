@@ -1,11 +1,24 @@
+import { useLocation } from "react-router-dom";
+
 import Navigation from "../Navigation/Navigation";
 
 import "./Header.css";
 
 function Header({ handleLoginClick }) {
+  const { pathname } = useLocation();
   return (
-    <header className="header header__shadow_primary">
-      <div className="header__title header__color_primary">NewsExplorer</div>
+    <header
+      className={`header ${
+        pathname === "/" ? "header__shadow_primary" : "header__shadow_secondary"
+      }`}
+    >
+      <div
+        className={`header__title ${
+          pathname === "/" ? "header__color_primary" : "header__color_secondary"
+        }`}
+      >
+        NewsExplorer
+      </div>
       <Navigation handleLoginClick={handleLoginClick}></Navigation>
     </header>
   );

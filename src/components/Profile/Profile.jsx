@@ -3,7 +3,7 @@ import "./Profile.css";
 
 function Profile({ newsArticles }) {
   return (
-    <main className="profile profile_hidden">
+    <main className="profile">
       <div className="profile__header">
         <h3 className="profile__title">Saved articles</h3>
         <h2 className="profile__information">
