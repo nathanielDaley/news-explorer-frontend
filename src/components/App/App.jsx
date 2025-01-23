@@ -16,6 +16,9 @@ const NUM_ARTICLES_TO_SHOW = 3;
 const SEARCH_EMPTY_ERROR_TITLE = "Nothing found";
 const SEARCH_EMPTY_ERROR_DESCRIPTION =
   "Sorry, but nothing matched your search terms.";
+const SEARCH_DEFAULT_ERROR_TITLE = "Search Error";
+const SEARCH_DEFAULT_ERROR_DESCRIPTION =
+  "Sorry, something went wrong during the request. Please try again later.";
 
 function App() {
   const [activeModal, setActiveModal] = useState("");
@@ -63,18 +66,16 @@ function App() {
         resetNumArticlesToShow();
         setSearched(true);
       })
-      .catch(console.error)
+      .catch((error) => {
+        setSearchError({
+          title: SEARCH_DEFAULT_ERROR_TITLE,
+          description: SEARCH_DEFAULT_ERROR_DESCRIPTION,
+        });
+        console.error(error);
+      })
       .finally(() => {
         setIsLoading(false);
       });
-  };
-
-  const showError = (s) => {
-    setSearchError(s);
-  };
-
-  const resetError = () => {
-    setSearchError("");
   };
 
   const showMoreArticles = () => {

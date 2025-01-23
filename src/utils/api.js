@@ -10,6 +10,9 @@ const checkResponse = (res) => {
 
 const request = (url, options) => {
   return fetch(url, options).then(checkResponse);
+  // return new Promise((resolve, reject) => {
+  //   reject("Error test");
+  // });
 };
 
 export { checkResponse, request };
