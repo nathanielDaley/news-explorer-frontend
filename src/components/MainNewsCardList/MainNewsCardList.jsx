@@ -11,7 +11,9 @@ function MainNewsCardList({
   return (
     <section
       className={`main-news-card-list ${
-        searched ? "" : "main-news-card-list_hidden"
+        searched && newsArticles.length !== 0
+          ? ""
+          : "main-news-card-list_hidden"
       }`}
     >
       <h2 className="main-news-card-list__title">

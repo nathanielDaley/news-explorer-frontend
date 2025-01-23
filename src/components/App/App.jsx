@@ -13,6 +13,9 @@ import { getNewsArticles } from "../../utils/newsApi";
 import Profile from "../Profile/Profile";
 
 const NUM_ARTICLES_TO_SHOW = 3;
+const SEARCH_EMPTY_ERROR_TITLE = "Nothing found";
+const SEARCH_EMPTY_ERROR_DESCRIPTION =
+  "Sorry, but nothing matched your search terms.";
 
 function App() {
   const [activeModal, setActiveModal] = useState("");
@@ -21,6 +24,7 @@ function App() {
     useState(NUM_ARTICLES_TO_SHOW);
   const [searched, setSearched] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [searchError, setSearchError] = useState({});
 
   const closeActiveModal = () => {
     setActiveModal("");
@@ -40,9 +44,22 @@ function App() {
 
   const updateNewsArticles = (query) => {
     setIsLoading(true);
+
+    if (Object.keys(searchError).length !== 0) {
+      setSearchError({});
+    }
+
     getNewsArticles(query)
       .then((data) => {
         setNewsArticles(data.articles);
+
+        if (newsArticles.length === 0) {
+          setSearchError({
+            title: SEARCH_EMPTY_ERROR_TITLE,
+            description: SEARCH_EMPTY_ERROR_DESCRIPTION,
+          });
+        }
+
         resetNumArticlesToShow();
         setSearched(true);
       })
@@ -50,6 +67,14 @@ function App() {
       .finally(() => {
         setIsLoading(false);
       });
+  };
+
+  const showError = (s) => {
+    setSearchError(s);
+  };
+
+  const resetError = () => {
+    setSearchError("");
   };
 
   const showMoreArticles = () => {
@@ -104,6 +129,7 @@ function App() {
                   handleShowMoreArticles={showMoreArticles}
                   searched={searched}
                   isLoading={isLoading}
+                  searchError={searchError}
                 ></Main>
               }
             />

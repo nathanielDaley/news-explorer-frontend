@@ -1,0 +1,45 @@
+.search-error {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 80px 0;
+  background-color: rgba(245, 246, 247, 1);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.search-error_hidden {
+  display: none;
+}
+
+.search-error__image {
+  width: 82.5px;
+  height: 82.5px;
+}
+
+.search-error__title {
+  padding: 0;
+  margin: 31.5px 0 0;
+  font-family: "Roboto Slab", Garamond, "Times New Roman";
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(26, 27, 34, 1);
+}
+
+.search-error__description {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 16px 0 0;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(182, 188, 191, 1);
+}
