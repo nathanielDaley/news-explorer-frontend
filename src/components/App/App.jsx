@@ -44,7 +44,6 @@ function App() {
 
   const updateNewsArticles = (query) => {
     setIsLoading(true);
-    console.log(Object.keys(searchError));
 
     if (Object.keys(searchError).length !== 0) {
       setSearchError({});

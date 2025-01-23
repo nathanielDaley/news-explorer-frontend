@@ -9,7 +9,6 @@ const checkResponse = (res) => {
 };
 
 const request = (url, options) => {
-  console.log(url);
   return fetch(url, options).then(checkResponse);
 };
 
