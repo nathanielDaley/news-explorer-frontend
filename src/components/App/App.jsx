@@ -15,6 +15,7 @@ import Profile from "../Profile/Profile";
 function App() {
   const [activeModal, setActiveModal] = useState("");
   const [newsArticles, setNewsArticles] = useState([]);
+  const [searched, setSearched] = useState(false);
 
   const closeActiveModal = () => {
     setActiveModal("");
@@ -32,10 +33,11 @@ function App() {
     setActiveModal("register");
   };
 
-  const updateNewsArticles = (term) => {
-    getNewsArticles(term)
+  const updateNewsArticles = (query) => {
+    getNewsArticles(query)
       .then((data) => {
         setNewsArticles(data.articles);
+        setSearched(true);
       })
       .catch(console.error);
   };
@@ -78,6 +80,7 @@ function App() {
                 <Main
                   newsArticles={newsArticles}
                   handleSubmitSearchForm={updateNewsArticles}
+                  searched={searched}
                 ></Main>
               }
             />

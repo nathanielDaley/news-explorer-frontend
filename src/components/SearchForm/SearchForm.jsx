@@ -24,7 +24,7 @@ function SearchForm({ handleSubmitSearchForm }) {
             type="text"
             className="search-form__input"
             id="search-form-input"
-            name="term"
+            name="query"
             placeholder="Enter topic"
             value={values.query}
             onChange={handleChange}

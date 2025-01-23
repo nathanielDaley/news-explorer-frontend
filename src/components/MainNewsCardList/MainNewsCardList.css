@@ -5,6 +5,10 @@
   background-color: rgba(245, 246, 247, 1);
 }
 
+.main-news-card-list_hidden {
+  display: none;
+}
+
 .main-news-card-list__card-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
