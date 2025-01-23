@@ -1,16 +1,33 @@
+import { useState, useEffect } from "react";
 import MainNewsCard from "../MainNewsCard/MainNewsCard";
 import "./MainNewsCardList.css";
 
 function MainNewsCardList({ newsArticles }) {
+  const [numArticlesToShow, setNumArticlesToShow] = useState(3);
+
+  const showMoreArticles = () => {
+    if (numArticlesToShow < newsArticles.length) {
+      setNumArticlesToShow(numArticlesToShow + 3);
+    }
+  };
+
   return (
     <section className="main-news-card-list">
       <h2 className="main-news-card-list__title">Search results</h2>
       <div className="main-news-card-list__card-list">
-        {newsArticles.map((item) => (
+        {newsArticles.slice(0, numArticlesToShow).map((item) => (
           <MainNewsCard key={item._id} newsArticle={item}></MainNewsCard>
         ))}
       </div>
-      <button className="main-news-card-list__show-more-button">
+      <button
+        type="button"
+        onClick={showMoreArticles}
+        className={`main-news-card-list__show-more-button ${
+          numArticlesToShow > newsArticles.length
+            ? "main-news-card-list__show-more-button_hidden"
+            : ""
+        }`}
+      >
         Show more
       </button>
     </section>

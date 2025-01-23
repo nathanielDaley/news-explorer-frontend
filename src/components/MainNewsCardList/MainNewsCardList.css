@@ -50,3 +50,7 @@
   opacity: 0.9;
   transition: linear 0.3s background-color, linear 0.3s opacity;
 }
+
+.main-news-card-list__show-more-button_hidden {
+  display: none;
+}
