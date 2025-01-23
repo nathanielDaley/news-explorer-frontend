@@ -11,6 +11,12 @@ function ModalWithForm({
   handleCloseClick,
   handleAlternativeButtonClick,
 }) {
+  const test = (event) => {
+    event.preventDefault();
+
+    console.log("test");
+  };
+
   return (
     <div
       className={`modal-with-form${isOpen ? " modal-with-form_opened" : ""}`}
@@ -28,9 +34,9 @@ function ModalWithForm({
             className="modal-with-form__close-icon"
           />
         </button>
-        <form className="modal-with-form__form">
+        <form onSubmit={test} className="modal-with-form__form">
           {children}
-          <button className="modal-with-form__submit-button">
+          <button type="submit" className="modal-with-form__submit-button">
             {buttonText}
           </button>
           <div className="modal-with-form__alternate-section">

@@ -5,9 +5,9 @@ import {
 } from "../utils/constants.js";
 import { request } from "../utils/api.js";
 
-const getNewsArticles = (term) => {
+const getNewsArticles = (query) => {
   return request(
-    `https://newsapi.org/v2/everything?apiKey=${newsApiKey}&pageSize=${defaultNumberOfArticlesToRetrieve}&q=${term}&from=${deltaTimeToSearch}`
+    `https://newsapi.org/v2/everything?apiKey=${newsApiKey}&pageSize=${defaultNumberOfArticlesToRetrieve}&q=${query}&from=${deltaTimeToSearch}`
   );
 };
 
