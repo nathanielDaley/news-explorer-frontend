@@ -26,7 +26,7 @@ function SearchForm({ handleSubmitSearchForm }) {
             id="search-form-input"
             name="query"
             placeholder="Enter topic"
-            value={values.query}
+            value={values.query || ""}
             onChange={handleChange}
             required
             onInvalid={(event) =>
