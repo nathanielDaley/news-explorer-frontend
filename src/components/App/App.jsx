@@ -20,6 +20,7 @@ function App() {
   const [numArticlesToShow, setNumArticlesToShow] =
     useState(NUM_ARTICLES_TO_SHOW);
   const [searched, setSearched] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const closeActiveModal = () => {
     setActiveModal("");
@@ -38,13 +39,17 @@ function App() {
   };
 
   const updateNewsArticles = (query) => {
+    setIsLoading(true);
     getNewsArticles(query)
       .then((data) => {
         setNewsArticles(data.articles);
         resetNumArticlesToShow();
         setSearched(true);
       })
-      .catch(console.error);
+      .catch(console.error)
+      .finally(() => {
+        setIsLoading(false);
+      });
   };
 
   const showMoreArticles = () => {
@@ -98,6 +103,7 @@ function App() {
                   numArticlesToShow={numArticlesToShow}
                   handleShowMoreArticles={showMoreArticles}
                   searched={searched}
+                  isLoading={isLoading}
                 ></Main>
               }
             />

@@ -11,11 +11,12 @@ function Main({
   numArticlesToShow,
   handleShowMoreArticles,
   searched,
+  isLoading,
 }) {
   return (
     <main className="main">
       <SearchForm handleSubmitSearchForm={handleSubmitSearchForm}></SearchForm>
-      <Preloader></Preloader>
+      <Preloader isLoading={isLoading}></Preloader>
       <MainNewsCardList
         newsArticles={newsArticles}
         numArticlesToShow={numArticlesToShow}

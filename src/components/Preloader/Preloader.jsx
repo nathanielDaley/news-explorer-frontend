@@ -1,8 +1,8 @@
 import "./Preloader.css";
 
-function Preloader() {
+function Preloader({ isLoading }) {
   return (
-    <section className="preloader preloader_hidden">
+    <section className={`preloader ${isLoading ? "" : "preloader_hidden"}`}>
       <div className="preloader__spinner"></div>
       <div className="preloader__title">Searching for news...</div>
     </section>
