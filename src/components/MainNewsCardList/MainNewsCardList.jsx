@@ -2,17 +2,12 @@ import { useState, useEffect } from "react";
 import MainNewsCard from "../MainNewsCard/MainNewsCard";
 import "./MainNewsCardList.css";
 
-function MainNewsCardList({ newsArticles, searched }) {
-  const [numArticlesToShow, setNumArticlesToShow] = useState(3);
-
-  const showMoreArticles = () => {
-    if (numArticlesToShow < newsArticles.length) {
-      setNumArticlesToShow(numArticlesToShow + 3);
-    }
-  };
-
-  let articlesNumber = 0;
-
+function MainNewsCardList({
+  newsArticles,
+  numArticlesToShow,
+  handleShowMoreArticles,
+  searched,
+}) {
   return (
     <section
       className={`main-news-card-list ${
@@ -29,7 +24,7 @@ function MainNewsCardList({ newsArticles, searched }) {
       </div>
       <button
         type="button"
-        onClick={showMoreArticles}
+        onClick={handleShowMoreArticles}
         className={`main-news-card-list__show-more-button ${
           numArticlesToShow > newsArticles.length
             ? "main-news-card-list__show-more-button_hidden"

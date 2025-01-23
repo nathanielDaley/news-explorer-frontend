@@ -12,9 +12,13 @@ import "./App.css";
 import { getNewsArticles } from "../../utils/newsApi";
 import Profile from "../Profile/Profile";
 
+const NUM_ARTICLES_TO_SHOW = 3;
+
 function App() {
   const [activeModal, setActiveModal] = useState("");
   const [newsArticles, setNewsArticles] = useState([]);
+  const [numArticlesToShow, setNumArticlesToShow] =
+    useState(NUM_ARTICLES_TO_SHOW);
   const [searched, setSearched] = useState(false);
 
   const closeActiveModal = () => {
@@ -37,9 +41,20 @@ function App() {
     getNewsArticles(query)
       .then((data) => {
         setNewsArticles(data.articles);
+        resetNumArticlesToShow();
         setSearched(true);
       })
       .catch(console.error);
+  };
+
+  const showMoreArticles = () => {
+    if (numArticlesToShow < newsArticles.length) {
+      setNumArticlesToShow(numArticlesToShow + NUM_ARTICLES_TO_SHOW);
+    }
+  };
+
+  const resetNumArticlesToShow = () => {
+    setNumArticlesToShow(NUM_ARTICLES_TO_SHOW);
   };
 
   useEffect(() => {
@@ -80,6 +95,8 @@ function App() {
                 <Main
                   newsArticles={newsArticles}
                   handleSubmitSearchForm={updateNewsArticles}
+                  numArticlesToShow={numArticlesToShow}
+                  handleShowMoreArticles={showMoreArticles}
                   searched={searched}
                 ></Main>
               }
