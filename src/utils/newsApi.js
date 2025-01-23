@@ -1,7 +1,14 @@
-import { constantNewsArticles } from "../utils/constants.js";
+import {
+  newsApiKey,
+  defaultNumberOfArticlesToRetrieve,
+  deltaTimeToSearch,
+} from "../utils/constants.js";
+import { request } from "../utils/api.js";
 
-function getNewsArticles() {
-  return constantNewsArticles;
-}
+const getNewsArticles = (term) => {
+  return request(
+    `https://newsapi.org/v2/everything?apiKey=${newsApiKey}&pageSize=${defaultNumberOfArticlesToRetrieve}&q=${term}&from=${deltaTimeToSearch}`
+  );
+};
 
 export { getNewsArticles };

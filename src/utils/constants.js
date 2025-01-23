@@ -1,3 +1,10 @@
+const newsApiKey = "3c712a3af1454c1a9513afd875510fd6";
+
+const defaultNumberOfArticlesToRetrieve = 100;
+const deltaTimeToSearch = new Date(
+  Date.now() - 7 * 24 * 60 * 60 * 1000
+).toISOString();
+
 const constantNewsArticles = [
   {
     _id: 1,
@@ -345,4 +352,9 @@ const constantNewsArticles = [
       "More good news for those looking to exit Meta’s social app ecosystem in favor of a more open alternative: An independent developer is building a photo-sharing app for Bluesky called Flashes. The soon… [+3795 chars]",
   },
 ];
-export { constantNewsArticles };
+export {
+  newsApiKey,
+  defaultNumberOfArticlesToRetrieve,
+  deltaTimeToSearch,
+  constantNewsArticles,
+};

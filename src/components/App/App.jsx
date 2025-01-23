@@ -32,9 +32,13 @@ function App() {
     setActiveModal("register");
   };
 
-  useEffect(() => {
-    setNewsArticles(getNewsArticles());
-  }, []);
+  const updateNewsArticles = (term) => {
+    getNewsArticles(term)
+      .then((data) => {
+        setNewsArticles(data.articles);
+      })
+      .catch(console.error);
+  };
 
   useEffect(() => {
     if (!activeModal) return; //stops the useEffect from continuing if there is no active modal
@@ -70,7 +74,12 @@ function App() {
           <Routes>
             <Route
               path="/"
-              element={<Main newsArticles={newsArticles}></Main>}
+              element={
+                <Main
+                  newsArticles={newsArticles}
+                  handleSubmitSearchForm={updateNewsArticles}
+                ></Main>
+              }
             />
             <Route
               path="/profile"

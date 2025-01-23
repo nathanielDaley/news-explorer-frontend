@@ -5,10 +5,10 @@ import About from "../About/About";
 import MainNewsCardList from "../MainNewsCardList/MainNewsCardList";
 import Preloader from "../Preloader/Preloader";
 
-function Main({ newsArticles }) {
+function Main({ newsArticles, handleSubmitSearchForm }) {
   return (
     <main className="main">
-      <SearchForm></SearchForm>
+      <SearchForm handleSubmitSearchForm={handleSubmitSearchForm}></SearchForm>
       <Preloader></Preloader>
       <MainNewsCardList newsArticles={newsArticles}></MainNewsCardList>
       <About></About>

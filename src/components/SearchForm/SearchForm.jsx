@@ -2,11 +2,12 @@ import "./SearchForm.css";
 
 import { useForm } from "../../hooks/useForm";
 
-function SearchForm() {
+function SearchForm({ handleSubmitSearchForm }) {
   const { values, handleChange, setValues } = useForm({});
 
-  const test = () => {
-    console.log("test");
+  const submitSearchForm = (event) => {
+    event.preventDefault();
+    handleSubmitSearchForm(values.term);
   };
 
   return (
@@ -29,7 +30,13 @@ function SearchForm() {
             onChange={handleChange}
             required
           />
-          <button className="search-form__button">Search</button>
+          <button
+            type="submit"
+            onClick={submitSearchForm}
+            className="search-form__button"
+          >
+            Search
+          </button>
         </div>
       </form>
     </section>

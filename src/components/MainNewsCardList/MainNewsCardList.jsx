@@ -11,12 +11,14 @@ function MainNewsCardList({ newsArticles }) {
     }
   };
 
+  let articlesNumber = 0;
+
   return (
     <section className="main-news-card-list">
       <h2 className="main-news-card-list__title">Search results</h2>
       <div className="main-news-card-list__card-list">
-        {newsArticles.slice(0, numArticlesToShow).map((item) => (
-          <MainNewsCard key={item._id} newsArticle={item}></MainNewsCard>
+        {newsArticles.slice(0, numArticlesToShow).map((item, index) => (
+          <MainNewsCard key={index} newsArticle={item}></MainNewsCard>
         ))}
       </div>
       <button
