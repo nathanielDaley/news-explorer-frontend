@@ -11,8 +11,13 @@ const register = (username, email, password) => {
 };
 
 const authorize = (email, password) => {
+  if (lastUsername !== "" && lastEmail !== "") {
+    return new Promise((resolve, reject) => {
+      resolve({ token: "a fake token" });
+    });
+  }
   return new Promise((resolve, reject) => {
-    resolve({ token: "a fake token" });
+    reject("you haven't registered yet");
   });
 };
 

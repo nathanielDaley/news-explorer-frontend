@@ -14,6 +14,8 @@ import { getNewsArticles } from "../../utils/newsApi";
 import * as auth from "../../utils/auth";
 import * as token from "../../utils/token";
 
+import { CurrentUserContext } from "../../contexts/CurrentUserContext.js";
+
 const NUM_ARTICLES_TO_SHOW = 3;
 const SEARCH_EMPTY_ERROR_TITLE = "Nothing found";
 const SEARCH_EMPTY_ERROR_DESCRIPTION =
@@ -135,43 +137,45 @@ function App() {
 
   return (
     <div className="app">
-      <div className="app__content">
-        <div className="app__container">
-          <Header handleLoginClick={showLoginModalClick}></Header>
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <Main
-                  newsArticles={newsArticles}
-                  handleSubmitSearchForm={updateNewsArticles}
-                  numArticlesToShow={numArticlesToShow}
-                  handleShowMoreArticles={showMoreArticles}
-                  searched={searched}
-                  isLoading={isLoading}
-                  searchError={searchError}
-                ></Main>
-              }
-            />
-            <Route
-              path="/profile"
-              element={<Profile newsArticles={newsArticles}></Profile>}
-            />
-          </Routes>
+      <CurrentUserContext.Provider value={{ currentUser, isLoggedIn }}>
+        <div className="app__content">
+          <div className="app__container">
+            <Header handleLoginClick={showLoginModalClick}></Header>
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <Main
+                    newsArticles={newsArticles}
+                    handleSubmitSearchForm={updateNewsArticles}
+                    numArticlesToShow={numArticlesToShow}
+                    handleShowMoreArticles={showMoreArticles}
+                    searched={searched}
+                    isLoading={isLoading}
+                    searchError={searchError}
+                  ></Main>
+                }
+              />
+              <Route
+                path="/profile"
+                element={<Profile newsArticles={newsArticles}></Profile>}
+              />
+            </Routes>
+          </div>
+          <Footer></Footer>
         </div>
-        <Footer></Footer>
-      </div>
-      <LoginModal
-        activeModal={activeModal}
-        handleCloseClick={closeActiveModal}
-        handleRegisterClick={showRegisterModalClick}
-        handleSubmit={handleLogin}
-      ></LoginModal>
-      <RegisterModal
-        activeModal={activeModal}
-        handleCloseClick={closeActiveModal}
-        handleLoginClick={showLoginModalClick}
-      ></RegisterModal>
+        <LoginModal
+          activeModal={activeModal}
+          handleCloseClick={closeActiveModal}
+          handleRegisterClick={showRegisterModalClick}
+          handleSubmit={handleLogin}
+        ></LoginModal>
+        <RegisterModal
+          activeModal={activeModal}
+          handleCloseClick={closeActiveModal}
+          handleLoginClick={showLoginModalClick}
+        ></RegisterModal>
+      </CurrentUserContext.Provider>
     </div>
   );
 }

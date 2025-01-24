@@ -1,9 +1,14 @@
 import { NavLink, useLocation } from "react-router-dom";
 
+import { CurrentUserContext } from "../../contexts/CurrentUserContext";
+
 import "./Navigation.css";
 import logoutIcon from "../../assets/logout.svg";
+import { useContext } from "react";
 
 function Navigation({ handleLoginClick }) {
+  const { currentUser, isLoggedIn } = useContext(CurrentUserContext);
+
   const { pathname } = useLocation();
 
   return (
@@ -47,7 +52,7 @@ function Navigation({ handleLoginClick }) {
           pathname === "/" ? "navigation__button_hidden" : ""
         }`}
       >
-        Elise
+        {currentUser.name}
         <img
           src={logoutIcon}
           alt="Logout icon"
