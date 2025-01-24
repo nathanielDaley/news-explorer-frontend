@@ -1,8 +1,10 @@
-const lastUsername = "";
-const lastEmail = "";
+let lastUsername = "";
+let lastEmail = "";
 
 const register = (username, email, password) => {
   lastUsername = username;
+  lastEmail = email;
+
   return new Promise((resolve, reject) => {
     resolve({
       user: { _id: "fake-id", name: username, email: email },

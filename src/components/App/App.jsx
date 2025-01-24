@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 
 import Header from "../Header/Header";
 import Main from "../Main/Main";
@@ -26,6 +26,8 @@ const SEARCH_DEFAULT_ERROR_DESCRIPTION =
   "Sorry, something went wrong during the request. Please try again later.";
 
 function App() {
+  const navigate = useNavigate();
+
   const [activeModal, setActiveModal] = useState("");
   const [newsArticles, setNewsArticles] = useState([]);
   const [numArticlesToShow, setNumArticlesToShow] =
@@ -105,9 +107,16 @@ function App() {
           setCurrentUser(data.user);
           setIsLoggedIn(true);
           closeActiveModal();
+          navigate("/profile");
         });
       })
       .catch(console.error);
+  };
+
+  const handleRegistration = ({ username, email, password }) => {
+    auth.register(username, email, password).then((data) => {
+      handleLogin({ email, password });
+    });
   };
 
   useEffect(() => {
@@ -179,6 +188,7 @@ function App() {
           activeModal={activeModal}
           handleCloseClick={closeActiveModal}
           handleLoginClick={showLoginModalClick}
+          handleSubmit={handleRegistration}
         ></RegisterModal>
       </CurrentUserContext.Provider>
     </div>
