@@ -7,6 +7,7 @@ import Footer from "../Footer/Footer";
 import LoginModal from "../LoginModal/LoginModal";
 import RegisterModal from "../RegisterModal/RegisterModal";
 import Profile from "../Profile/Profile";
+import ProtectedRoute from "../ProtectedRoute/ProtectedRoute.jsx";
 
 import "./App.css";
 
@@ -158,7 +159,11 @@ function App() {
               />
               <Route
                 path="/profile"
-                element={<Profile newsArticles={newsArticles}></Profile>}
+                element={
+                  <ProtectedRoute isLoggedIn={isLoggedIn}>
+                    <Profile newsArticles={newsArticles}></Profile>
+                  </ProtectedRoute>
+                }
               />
             </Routes>
           </div>
