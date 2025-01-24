@@ -4,6 +4,7 @@ import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 
 import "./Navigation.css";
 import logoutIcon from "../../assets/logout.svg";
+import whiteLogoutIcon from "../../assets/logout-white.svg";
 import { useContext } from "react";
 
 function Navigation({ handleLoginClick }) {
@@ -33,32 +34,45 @@ function Navigation({ handleLoginClick }) {
             ? ""
             : isActive
             ? "navigation__link navigation__color_secondary navigation__link_highlighted_secondary_color navigation__link_disabled"
-            : "navigation__link navigation__color_secondary navigation__link_highlighted_secondary_color navigation__link_hidden"
+            : "navigation__link navigation__color_primary"
         }
       >
-        Saved articles {pathname}
+        Saved articles
       </NavLink>
-      <button
-        type="button"
-        onClick={handleLoginClick}
-        className={`navigation__sign-in-button ${
-          pathname === "/" ? "" : "navigation__button_hidden"
-        } navigation__button_primary_color`}
-      >
-        Sign in
-      </button>
-      <button
-        className={`navigation__logout-button navigation__button_secondary_color ${
-          pathname === "/" ? "navigation__button_hidden" : ""
-        }`}
-      >
-        {currentUser.name}
-        <img
-          src={logoutIcon}
-          alt="Logout icon"
-          className="navigation__logout-icon"
-        />
-      </button>
+      {!isLoggedIn && (
+        <button
+          type="button"
+          onClick={handleLoginClick}
+          className={`navigation__sign-in-button navigation__button_primary_color`}
+        >
+          Sign in
+        </button>
+      )}
+      {isLoggedIn && (
+        <button
+          className={`navigation__logout-button  ${
+            pathname === "/"
+              ? "navigation__button_primary_color"
+              : "navigation__button_secondary_color"
+          }`}
+        >
+          {currentUser.name}
+          {!isLoggedIn && (
+            <img
+              src={logoutIcon}
+              alt="Logout icon"
+              className="navigation__logout-icon"
+            />
+          )}
+          {isLoggedIn && (
+            <img
+              src={whiteLogoutIcon}
+              alt="Logout icon"
+              className="navigation__logout-icon"
+            />
+          )}
+        </button>
+      )}
     </div>
   );
 }
