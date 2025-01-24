@@ -1,3 +1,4 @@
+const BASE_URL = "http://localhost:3003";
 const BASE_HEADERS = { "Content-Type": "application/json" };
 
 const checkResponse = (res) => {
@@ -15,4 +16,4 @@ const request = (url, options) => {
   // });
 };
 
-export { checkResponse, request };
+export { BASE_URL, BASE_HEADERS, checkResponse, request };
