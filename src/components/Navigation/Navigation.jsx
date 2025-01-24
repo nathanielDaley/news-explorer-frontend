@@ -7,7 +7,7 @@ import logoutIcon from "../../assets/logout.svg";
 import whiteLogoutIcon from "../../assets/logout-white.svg";
 import { useContext } from "react";
 
-function Navigation({ handleLoginClick }) {
+function Navigation({ handleLoginClick, handleLogoutClick }) {
   const { currentUser, isLoggedIn } = useContext(CurrentUserContext);
 
   const { pathname } = useLocation();
@@ -52,6 +52,8 @@ function Navigation({ handleLoginClick }) {
       )}
       {isLoggedIn && (
         <button
+          type="button"
+          onClick={handleLogoutClick}
           className={`navigation__logout-button  ${
             pathname === "/"
               ? "navigation__button_primary_color"
@@ -59,14 +61,14 @@ function Navigation({ handleLoginClick }) {
           }`}
         >
           {currentUser.name}
-          {!isLoggedIn && (
+          {!(pathname === "/") && (
             <img
               src={logoutIcon}
               alt="Logout icon"
               className="navigation__logout-icon"
             />
           )}
-          {isLoggedIn && (
+          {pathname === "/" && (
             <img
               src={whiteLogoutIcon}
               alt="Logout icon"

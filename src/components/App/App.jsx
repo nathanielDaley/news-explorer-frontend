@@ -119,6 +119,11 @@ function App() {
     });
   };
 
+  const handleLogout = () => {
+    setCurrentUser({});
+    setIsLoggedIn(false);
+  };
+
   useEffect(() => {
     if (!activeModal) return; //stops the useEffect from continuing if there is no active modal
 
@@ -150,7 +155,10 @@ function App() {
       <CurrentUserContext.Provider value={{ currentUser, isLoggedIn }}>
         <div className="app__content">
           <div className="app__container">
-            <Header handleLoginClick={showLoginModalClick}></Header>
+            <Header
+              handleLoginClick={showLoginModalClick}
+              handleLogoutClick={handleLogout}
+            ></Header>
             <Routes>
               <Route
                 path="/"

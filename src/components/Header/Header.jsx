@@ -4,7 +4,7 @@ import Navigation from "../Navigation/Navigation";
 
 import "./Header.css";
 
-function Header({ handleLoginClick }) {
+function Header({ handleLoginClick, handleLogoutClick }) {
   const { pathname } = useLocation();
   return (
     <header
@@ -19,7 +19,10 @@ function Header({ handleLoginClick }) {
       >
         NewsExplorer
       </div>
-      <Navigation handleLoginClick={handleLoginClick}></Navigation>
+      <Navigation
+        handleLoginClick={handleLoginClick}
+        handleLogoutClick={handleLogoutClick}
+      ></Navigation>
     </header>
   );
 }
