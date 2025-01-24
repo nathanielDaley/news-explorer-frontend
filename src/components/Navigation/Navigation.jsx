@@ -26,19 +26,21 @@ function Navigation({ handleLoginClick }) {
       >
         Home
       </NavLink>
-      <NavLink
-        type="button"
-        to="/profile"
-        className={({ isActive, isPending }) =>
-          isPending
-            ? ""
-            : isActive
-            ? "navigation__link navigation__color_secondary navigation__link_highlighted_secondary_color navigation__link_disabled"
-            : "navigation__link navigation__color_primary"
-        }
-      >
-        Saved articles
-      </NavLink>
+      {isLoggedIn && (
+        <NavLink
+          type="button"
+          to="/profile"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? ""
+              : isActive
+              ? "navigation__link navigation__color_secondary navigation__link_highlighted_secondary_color navigation__link_disabled"
+              : "navigation__link navigation__color_primary"
+          }
+        >
+          Saved articles
+        </NavLink>
+      )}
       {!isLoggedIn && (
         <button
           type="button"
