@@ -12,7 +12,12 @@ const LOGIN_MODAL_EMAIL_INPUT_PLACEHOLDER_TEXT = "Enter email";
 const LOGIN_MODAL_PASSWORD_INPUT_LABEL_TEXT = "Password";
 const LOGIN_MODAL_PASSWORD_INPUT_PLACEHOLDER_TEXT = "Enter password";
 
-function LoginModal({ activeModal, handleCloseClick, handleRegisterClick }) {
+function LoginModal({
+  activeModal,
+  handleCloseClick,
+  handleRegisterClick,
+  handleSubmit,
+}) {
   const { values, handleChange, setValues } = useForm({});
 
   return (
@@ -22,7 +27,9 @@ function LoginModal({ activeModal, handleCloseClick, handleRegisterClick }) {
       altButtonText={LOGIN_MODAL_ALTERNATE_BUTTON_TEXT}
       isOpen={activeModal === "login"}
       handleCloseClick={handleCloseClick}
+      handleSubmitClick={handleSubmit}
       handleAlternativeButtonClick={handleRegisterClick}
+      values={values}
     >
       <label htmlFor="login-email" className="login-modal__label">
         {LOGIN_MODAL_EMAIL_INPUT_LABEL_TEXT}

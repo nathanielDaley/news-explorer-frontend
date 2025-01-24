@@ -5,7 +5,7 @@ const register = (username, email, password) => {
   lastUsername = username;
   return new Promise((resolve, reject) => {
     resolve({
-      data: { _id: "fake-id", name: username, email: email },
+      user: { _id: "fake-id", name: username, email: email },
     });
   });
 };
@@ -19,7 +19,7 @@ const authorize = (email, password) => {
 const validateLogin = (token) => {
   return new Promise((resolve, reject) => {
     resolve({
-      data: { _id: "fake-id", name: lastUsername, email: lastEmail },
+      user: { _id: "fake-id", name: lastUsername, email: lastEmail },
     });
   });
 };

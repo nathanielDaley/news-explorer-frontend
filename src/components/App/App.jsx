@@ -6,11 +6,13 @@ import Main from "../Main/Main";
 import Footer from "../Footer/Footer";
 import LoginModal from "../LoginModal/LoginModal";
 import RegisterModal from "../RegisterModal/RegisterModal";
+import Profile from "../Profile/Profile";
 
 import "./App.css";
 
 import { getNewsArticles } from "../../utils/newsApi";
-import Profile from "../Profile/Profile";
+import * as auth from "../../utils/auth";
+import * as token from "../../utils/token";
 
 const NUM_ARTICLES_TO_SHOW = 3;
 const SEARCH_EMPTY_ERROR_TITLE = "Nothing found";
@@ -28,6 +30,8 @@ function App() {
   const [searched, setSearched] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [searchError, setSearchError] = useState({});
+  const [currentUser, setCurrentUser] = useState({});
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const closeActiveModal = () => {
     setActiveModal("");
@@ -88,6 +92,21 @@ function App() {
     setNumArticlesToShow(NUM_ARTICLES_TO_SHOW);
   };
 
+  const handleLogin = ({ email, password }) => {
+    auth
+      .authorize(email, password)
+      .then((data) => {
+        token.setToken(data.token);
+
+        auth.validateLogin(data.token).then((data) => {
+          setCurrentUser(data.user);
+          setIsLoggedIn(true);
+          closeActiveModal();
+        });
+      })
+      .catch(console.error);
+  };
+
   useEffect(() => {
     if (!activeModal) return; //stops the useEffect from continuing if there is no active modal
 
@@ -146,6 +165,7 @@ function App() {
         activeModal={activeModal}
         handleCloseClick={closeActiveModal}
         handleRegisterClick={showRegisterModalClick}
+        handleSubmit={handleLogin}
       ></LoginModal>
       <RegisterModal
         activeModal={activeModal}
