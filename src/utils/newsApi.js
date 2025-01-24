@@ -5,9 +5,14 @@ import {
 } from "../utils/constants.js";
 import { request } from "../utils/api.js";
 
+const newsApiBaseUrl =
+  process.env.NODE_ENV === "production"
+    ? "https://nomoreparties.co/news/v2/everything"
+    : "https://newsapi.org/v2/everything";
+
 const getNewsArticles = (query) => {
   return request(
-    `https://newsapi.org/v2/everything?apiKey=${newsApiKey}&pageSize=${defaultNumberOfArticlesToRetrieve}&q=${query}&from=${deltaTimeToSearch}`
+    `${newsApiBaseUrl}?apiKey=${newsApiKey}&pageSize=${defaultNumberOfArticlesToRetrieve}&q=${query}&from=${deltaTimeToSearch}`
   );
 };
 
