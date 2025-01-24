@@ -1,18 +1,25 @@
 .about {
-  height: 493px;
+  box-sizing: border-box;
   position: relative;
   margin: 0;
-  padding: 131px 216px 0 624px;
+  padding: 80px 15% 80px 7.2%;
   display: flex;
+  gap: 60px;
+  align-items: center;
 }
 
 .about__image {
-  position: absolute;
-  width: 464px;
-  height: 464px;
+  box-sizing: border-box;
+  max-width: 464px;
+  max-height: 464px;
+  width: 42.2%;
+  height: auto;
   border-radius: 50%;
-  left: 104px;
-  top: 80px;
+}
+
+.about__content {
+  padding: 0 0 16% 0;
+  margin: 0;
 }
 
 .about__title {
