@@ -122,6 +122,8 @@ function App() {
   const handleLogout = () => {
     setCurrentUser({});
     setIsLoggedIn(false);
+
+    token.removeToken();
   };
 
   useEffect(() => {
