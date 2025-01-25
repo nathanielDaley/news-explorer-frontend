@@ -38,4 +38,10 @@ const saveArticle = (article, keyword) => {
   });
 };
 
-export { getNewsArticles, saveArticle };
+const deleteArticle = (article) => {
+  return new Promise((resolve, reject) => {
+    resolve(article);
+  });
+};
+
+export { getNewsArticles, saveArticle, deleteArticle };

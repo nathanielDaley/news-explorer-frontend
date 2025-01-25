@@ -11,7 +11,11 @@ import ProtectedRoute from "../ProtectedRoute/ProtectedRoute.jsx";
 
 import "./App.css";
 
-import { getNewsArticles, saveArticle } from "../../utils/newsApi";
+import {
+  deleteArticle,
+  getNewsArticles,
+  saveArticle,
+} from "../../utils/newsApi";
 import * as auth from "../../utils/auth";
 import * as token from "../../utils/token";
 
@@ -131,14 +135,29 @@ function App() {
 
   const handleSaveArticle = (newsArticle) => {
     saveArticle(newsArticle, lastQuery).then((data) => {
-      updateUserSavedNewsArticles(data, "push");
+      updateUserSavedNewsArticles(data, "unshift");
     });
   };
 
-  const updateUserSavedNewsArticles = (data, method) => {
+  const handleRemovedSavedArticle = (newsArticle) => {
+    deleteArticle(newsArticle).then(() => {
+      updateUserSavedNewsArticles(newsArticle, "delete");
+    });
+  };
+
+  const updateUserSavedNewsArticles = (newsArticle, method) => {
     const newNewsArticles = [...userSavedNewsArticles];
 
-    newNewsArticles[method](data);
+    if (method !== "delete") {
+      newNewsArticles[method](newsArticle);
+
+      console.log(newNewsArticles);
+    } else {
+      const index = newNewsArticles.findIndex(
+        (data) => data._id === newsArticle._id
+      );
+      newNewsArticles.splice(index, 1);
+    }
 
     setUserSavedNewsArticles(newNewsArticles);
   };
@@ -201,7 +220,9 @@ function App() {
                 path="/profile"
                 element={
                   <ProtectedRoute isLoggedIn={isLoggedIn}>
-                    <Profile></Profile>
+                    <Profile
+                      handleRemovedSavedArticle={handleRemovedSavedArticle}
+                    ></Profile>
                   </ProtectedRoute>
                 }
               />

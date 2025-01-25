@@ -4,7 +4,7 @@ import { useContext } from "react";
 import SavedNewsCardList from "../SavedNewsCardList/SavedNewsCardList";
 import "./Profile.css";
 
-function Profile() {
+function Profile({ handleRemovedSavedArticle }) {
   const { currentUser, userSavedNewsArticles, isLoggedIn } =
     useContext(CurrentUserContext);
 
@@ -25,6 +25,7 @@ function Profile() {
       </div>
       <SavedNewsCardList
         newsArticles={userSavedNewsArticles}
+        handleRemovedSavedArticle={handleRemovedSavedArticle}
       ></SavedNewsCardList>
     </main>
   );

@@ -15,6 +15,10 @@
   cursor: pointer;
 }
 
+.saved-news-card__card-link {
+  text-decoration: none;
+}
+
 .saved-news-card__keyword {
   position: absolute;
   top: 24px;
