@@ -18,7 +18,9 @@ function SavedNewsCard({ newsArticle, handleRemovedSavedArticle }) {
         target="_blank"
         className="saved-news-card__card-link"
       >
-        <label className="saved-news-card__keyword">Nature</label>
+        <label className="saved-news-card__keyword">
+          {newsArticle.keyword}
+        </label>
         <button
           type="button"
           onClick={deleteArticleClick}
