@@ -10,6 +10,20 @@ function SearchForm({ handleSubmitSearchForm }) {
     handleSubmitSearchForm(values.query);
   };
 
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+
+    const singleWord = value
+      .replace(/[^a-zA-Z]/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+
+    setValues((previousData) => ({
+      ...previousData,
+      [name]: singleWord,
+    }));
+  };
+
   return (
     <section className="search-form">
       <div className="search-form__background-cover"></div>
@@ -27,7 +41,7 @@ function SearchForm({ handleSubmitSearchForm }) {
             name="query"
             placeholder="Enter topic"
             value={values.query || ""}
-            onChange={handleChange}
+            onChange={handleInputChange}
             required
             onInvalid={(event) =>
               event.currentTarget.setCustomValidity("Please enter a keyword")
