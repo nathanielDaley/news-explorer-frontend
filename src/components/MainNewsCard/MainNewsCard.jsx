@@ -5,11 +5,11 @@ import NewsCard from "../NewsCard/NewsCard.jsx";
 import savedIcon from "../../assets/saved.svg";
 import unsavedIcon from "../../assets/unsaved.svg";
 
-function MainNewsCard({ newsArticle }) {
+function MainNewsCard({ newsArticle, handleSaveArticle, lastQuery }) {
   const handleSaveClick = (event) => {
     event.preventDefault();
 
-    console.log("test");
+    handleSaveArticle(newsArticle, lastQuery);
   };
 
   return (

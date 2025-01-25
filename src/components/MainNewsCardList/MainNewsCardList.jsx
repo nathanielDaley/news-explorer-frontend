@@ -7,6 +7,8 @@ function MainNewsCardList({
   numArticlesToShow,
   handleShowMoreArticles,
   searched,
+  handleSaveArticle,
+  lastQuery,
 }) {
   return (
     <section
@@ -21,7 +23,12 @@ function MainNewsCardList({
       </h2>
       <div className="main-news-card-list__card-list">
         {newsArticles.slice(0, numArticlesToShow).map((item, index) => (
-          <MainNewsCard key={index} newsArticle={item}></MainNewsCard>
+          <MainNewsCard
+            key={index}
+            newsArticle={item}
+            handleSaveArticle={handleSaveArticle}
+            lastQuery={lastQuery}
+          ></MainNewsCard>
         ))}
       </div>
       <button

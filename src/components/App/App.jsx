@@ -11,7 +11,7 @@ import ProtectedRoute from "../ProtectedRoute/ProtectedRoute.jsx";
 
 import "./App.css";
 
-import { getNewsArticles } from "../../utils/newsApi";
+import { getNewsArticles, saveArticle } from "../../utils/newsApi";
 import * as auth from "../../utils/auth";
 import * as token from "../../utils/token";
 
@@ -37,6 +37,8 @@ function App() {
   const [searchError, setSearchError] = useState({});
   const [currentUser, setCurrentUser] = useState({});
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userSavedNewsArticles, setUserSavedNewsArticles] = useState([]);
+  const [lastQuery, setLastQuery] = useState("");
 
   const closeActiveModal = () => {
     setActiveModal("");
@@ -56,6 +58,7 @@ function App() {
 
   const updateNewsArticles = (query) => {
     setIsLoading(true);
+    setLastQuery(query);
 
     if (Object.keys(searchError).length !== 0) {
       setSearchError({});
@@ -126,6 +129,20 @@ function App() {
     token.removeToken();
   };
 
+  const handleSaveArticle = (newsArticle) => {
+    saveArticle(newsArticle, lastQuery).then((data) => {
+      updateUserSavedNewsArticles(data, "push");
+    });
+  };
+
+  const updateUserSavedNewsArticles = (data, method) => {
+    const newNewsArticles = [...userSavedNewsArticles];
+
+    newNewsArticles[method](data);
+
+    setUserSavedNewsArticles(newNewsArticles);
+  };
+
   useEffect(() => {
     if (!activeModal) return; //stops the useEffect from continuing if there is no active modal
 
@@ -173,6 +190,8 @@ function App() {
                     searched={searched}
                     isLoading={isLoading}
                     searchError={searchError}
+                    handleSaveArticle={handleSaveArticle}
+                    lastQuery={lastQuery}
                   ></Main>
                 }
               />

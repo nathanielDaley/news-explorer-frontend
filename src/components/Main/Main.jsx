@@ -14,6 +14,8 @@ function Main({
   searched,
   isLoading,
   searchError,
+  handleSaveArticle,
+  lastQuery,
 }) {
   return (
     <main className="main">
@@ -25,6 +27,8 @@ function Main({
         numArticlesToShow={numArticlesToShow}
         handleShowMoreArticles={handleShowMoreArticles}
         searched={searched}
+        handleSaveArticle={handleSaveArticle}
+        lastQuery={lastQuery}
       ></MainNewsCardList>
       <About></About>
     </main>
