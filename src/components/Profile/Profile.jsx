@@ -4,7 +4,7 @@ import { useContext } from "react";
 import SavedNewsCardList from "../SavedNewsCardList/SavedNewsCardList";
 import "./Profile.css";
 
-function Profile({ newsArticles }) {
+function Profile() {
   const { currentUser, userSavedNewsArticles, isLoggedIn } =
     useContext(CurrentUserContext);
 
@@ -13,8 +13,8 @@ function Profile({ newsArticles }) {
       <div className="profile__header">
         <h3 className="profile__title">Saved articles</h3>
         <h2 className="profile__information">
-          {currentUser.name}, you have {userSavedNewsArticles?.length} saved
-          articles
+          {currentUser.name}, you have {userSavedNewsArticles?.length || 0}{" "}
+          saved articles
         </h2>
         <p className="profile__keywords-paragraph">
           By keywords:{" "}
@@ -23,7 +23,9 @@ function Profile({ newsArticles }) {
           </span>
         </p>
       </div>
-      <SavedNewsCardList newsArticles={newsArticles}></SavedNewsCardList>
+      <SavedNewsCardList
+        newsArticles={userSavedNewsArticles}
+      ></SavedNewsCardList>
     </main>
   );
 }

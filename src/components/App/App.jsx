@@ -132,7 +132,6 @@ function App() {
   const handleSaveArticle = (newsArticle) => {
     saveArticle(newsArticle, lastQuery).then((data) => {
       updateUserSavedNewsArticles(data, "push");
-      console.log("test");
     });
   };
 
@@ -172,7 +171,9 @@ function App() {
 
   return (
     <div className="app">
-      <CurrentUserContext.Provider value={{ currentUser, isLoggedIn }}>
+      <CurrentUserContext.Provider
+        value={{ currentUser, userSavedNewsArticles, isLoggedIn }}
+      >
         <div className="app__content">
           <div className="app__container">
             <Header
@@ -200,7 +201,7 @@ function App() {
                 path="/profile"
                 element={
                   <ProtectedRoute isLoggedIn={isLoggedIn}>
-                    <Profile newsArticles={newsArticles}></Profile>
+                    <Profile></Profile>
                   </ProtectedRoute>
                 }
               />
