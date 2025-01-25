@@ -13,10 +13,7 @@ function SearchForm({ handleSubmitSearchForm }) {
   const handleInputChange = (event) => {
     const { name, value } = event.target;
 
-    const singleWord = value
-      .replace(/[^a-zA-Z]/g, "")
-      .replace(/\s+/g, " ")
-      .trim();
+    const singleWord = value.replace(/\s/g, "").trim();
 
     setValues((previousData) => ({
       ...previousData,
