@@ -30,7 +30,13 @@ function Profile({ handleRemovedSavedArticle }) {
         </h2>
         <p className="profile__keywords-paragraph">
           By keywords:{" "}
-          <span className="profile__keywords">{keywords?.join(", ")}</span>
+          <span className="profile__keywords">
+            {keywords.length > 2
+              ? `${keywords[0]}, ${keywords[1]}, and ${
+                  keywords.length - 2
+                } more`
+              : keywords.join(", ")}
+          </span>
         </p>
       </div>
       <SavedNewsCardList
