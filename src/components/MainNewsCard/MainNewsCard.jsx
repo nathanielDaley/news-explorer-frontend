@@ -1,5 +1,5 @@
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import "./MainNewsCard.css";
 
@@ -12,11 +12,29 @@ function MainNewsCard({ newsArticle, handleSaveArticle, lastQuery }) {
   const { currentUser, userSavedNewsArticles, isLoggedIn } =
     useContext(CurrentUserContext);
 
+  const [isSaved, setIsSaved] = useState(false);
+
   const handleSaveClick = (event) => {
     event.preventDefault();
 
     handleSaveArticle(newsArticle, lastQuery);
   };
+
+  const checkIfSaved = () => {
+    userSavedNewsArticles?.forEach((savedNewsArticle) => {
+      const tempNewsArticle = { ...savedNewsArticle };
+      delete tempNewsArticle["_id"];
+      delete tempNewsArticle["keyword"];
+
+      if (savedNewsArticle === newsArticle) {
+        setIsSaved(true);
+      }
+    });
+  };
+
+  useEffect(() => {
+    checkIfSaved();
+  }, [userSavedNewsArticles]);
 
   return (
     <article className="main-news-card">
@@ -28,23 +46,29 @@ function MainNewsCard({ newsArticle, handleSaveArticle, lastQuery }) {
         <button
           type="button"
           onClick={handleSaveClick}
-          disabled={isLoggedIn ? "" : "disabled"}
+          disabled={isLoggedIn && !isSaved ? "" : "disabled"}
           className="main-news-card__save-button"
         >
-          <img
-            src={unsavedIcon}
-            alt="unsaved icon"
-            className="main-news-card__unsaved-icon"
-          />
-          <img
-            src={savedIcon}
-            alt="saved icon"
-            className="main-news-card__saved-icon main-news-card__icon_hidden"
-          />
+          {!isSaved && (
+            <img
+              src={unsavedIcon}
+              alt="unsaved icon"
+              className="main-news-card__unsaved-icon"
+            />
+          )}
+          {isSaved && (
+            <img
+              src={savedIcon}
+              alt="saved icon"
+              className="main-news-card__saved-icon"
+            />
+          )}
         </button>
-        <label htmlFor="" className="main-news-card__save-button-description">
-          Sign in to save articles
-        </label>
+        {!isLoggedIn && (
+          <label htmlFor="" className="main-news-card__save-button-description">
+            Sign in to save articles
+          </label>
+        )}
         {<NewsCard newsArticle={newsArticle}></NewsCard>}
       </a>
     </article>

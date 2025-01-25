@@ -150,8 +150,6 @@ function App() {
 
     if (method !== "delete") {
       newNewsArticles[method](newsArticle);
-
-      console.log(newNewsArticles);
     } else {
       const index = newNewsArticles.findIndex(
         (data) => data._id === newsArticle._id

@@ -61,7 +61,7 @@
   height: 40px;
   padding: 8px;
   opacity: 1;
-  transition: linear 0.3s opacity;
+  cursor: default;
 }
 
 .main-news-card__save-button-description {
