@@ -13,7 +13,7 @@ function Profile({ newsArticles }) {
       <div className="profile__header">
         <h3 className="profile__title">Saved articles</h3>
         <h2 className="profile__information">
-          {currentUser.name}, you have {userSavedNewsArticles.length} saved
+          {currentUser.name}, you have {userSavedNewsArticles?.length} saved
           articles
         </h2>
         <p className="profile__keywords-paragraph">

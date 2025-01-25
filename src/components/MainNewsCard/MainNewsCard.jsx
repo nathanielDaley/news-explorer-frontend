@@ -1,3 +1,6 @@
+import { CurrentUserContext } from "../../contexts/CurrentUserContext";
+import { useContext } from "react";
+
 import "./MainNewsCard.css";
 
 import NewsCard from "../NewsCard/NewsCard.jsx";
@@ -6,6 +9,9 @@ import savedIcon from "../../assets/saved.svg";
 import unsavedIcon from "../../assets/unsaved.svg";
 
 function MainNewsCard({ newsArticle, handleSaveArticle, lastQuery }) {
+  const { currentUser, userSavedNewsArticles, isLoggedIn } =
+    useContext(CurrentUserContext);
+
   const handleSaveClick = (event) => {
     event.preventDefault();
 
@@ -22,6 +28,7 @@ function MainNewsCard({ newsArticle, handleSaveArticle, lastQuery }) {
         <button
           type="button"
           onClick={handleSaveClick}
+          disabled={isLoggedIn ? "" : "disabled"}
           className="main-news-card__save-button"
         >
           <img

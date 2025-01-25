@@ -132,6 +132,7 @@ function App() {
   const handleSaveArticle = (newsArticle) => {
     saveArticle(newsArticle, lastQuery).then((data) => {
       updateUserSavedNewsArticles(data, "push");
+      console.log("test");
     });
   };
 
