@@ -28,6 +28,7 @@ function MainNewsCardList({
             newsArticle={item}
             handleSaveArticle={handleSaveArticle}
             lastQuery={lastQuery}
+            newsArticles={newsArticles}
           ></MainNewsCard>
         ))}
       </div>

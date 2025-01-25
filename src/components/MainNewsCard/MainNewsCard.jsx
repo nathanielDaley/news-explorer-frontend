@@ -8,7 +8,12 @@ import NewsCard from "../NewsCard/NewsCard.jsx";
 import savedIcon from "../../assets/saved.svg";
 import unsavedIcon from "../../assets/unsaved.svg";
 
-function MainNewsCard({ newsArticle, handleSaveArticle, lastQuery }) {
+function MainNewsCard({
+  newsArticle,
+  handleSaveArticle,
+  lastQuery,
+  newsArticles,
+}) {
   const { currentUser, userSavedNewsArticles, isLoggedIn } =
     useContext(CurrentUserContext);
 
@@ -21,20 +26,16 @@ function MainNewsCard({ newsArticle, handleSaveArticle, lastQuery }) {
   };
 
   const checkIfSaved = () => {
-    userSavedNewsArticles?.forEach((savedNewsArticle) => {
-      const tempNewsArticle = { ...savedNewsArticle };
-      delete tempNewsArticle["_id"];
-      delete tempNewsArticle["keyword"];
-
-      if (savedNewsArticle === newsArticle) {
-        setIsSaved(true);
-      }
+    const isArticleSaved = userSavedNewsArticles?.some((savedNewsArticle) => {
+      return savedNewsArticle.content === newsArticle.content;
     });
+
+    setIsSaved(isArticleSaved);
   };
 
   useEffect(() => {
     checkIfSaved();
-  }, [userSavedNewsArticles]);
+  }, [newsArticles, userSavedNewsArticles]);
 
   return (
     <article className="main-news-card">
