@@ -1,5 +1,5 @@
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import SavedNewsCardList from "../SavedNewsCardList/SavedNewsCardList";
 import "./Profile.css";
@@ -7,6 +7,18 @@ import "./Profile.css";
 function Profile({ handleRemovedSavedArticle }) {
   const { currentUser, userSavedNewsArticles, isLoggedIn } =
     useContext(CurrentUserContext);
+
+  const [keywords, setKeywords] = useState([]);
+
+  useEffect(() => {
+    const newKeywords = new Set();
+
+    userSavedNewsArticles.forEach((newsArticle) => {
+      newKeywords.add(newsArticle.keyword);
+    });
+
+    setKeywords([...newKeywords]);
+  }, [userSavedNewsArticles]);
 
   return (
     <main className="profile">
@@ -18,9 +30,7 @@ function Profile({ handleRemovedSavedArticle }) {
         </h2>
         <p className="profile__keywords-paragraph">
           By keywords:{" "}
-          <span className="profile__keywords">
-            Nature, Yellowstone, and 2 other
-          </span>
+          <span className="profile__keywords">{keywords?.join(", ")}</span>
         </p>
       </div>
       <SavedNewsCardList
