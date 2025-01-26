@@ -3,8 +3,6 @@
   position: absolute;
   width: 100%;
   max-width: 1440px;
-  left: 50%;
-  transform: translateX(-50%);
   height: 80px;
   margin: 0;
   display: flex;
@@ -39,4 +37,14 @@
 
 .header__color_secondary {
   color: rgba(26, 27, 34, 1);
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    height: 66px;
+  }
+
+  .header__title {
+    padding-left: 40px;
+  }
 }

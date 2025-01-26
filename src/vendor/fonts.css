@@ -18,20 +18,20 @@
 
 @font-face {
   font-family: "Roboto";
+  font-weight: 700;
+  src: url(../vendor/fonts/roboto-700.woff);
+}
+
+@font-face {
+  font-family: "Roboto";
   font-weight: 900;
-  src: url(../vendor/fonts/roboto-500.woff);
+  src: url(../vendor/fonts/roboto-900.woff);
 }
 
 @font-face {
   font-family: "Roboto Slab";
   font-weight: 400;
   src: url("../vendor/fonts/roboto-slab-400-regular.woff") format(truetype);
-}
-
-@font-face {
-  font-family: "Roboto Slab";
-  font-weight: 700;
-  src: url("../vendor/fonts/roboto-slab-700.woff") format(truetype);
 }
 
 @font-face {

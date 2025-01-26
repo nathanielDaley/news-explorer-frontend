@@ -50,6 +50,7 @@
 }
 
 .navigation__sign-in-button {
+  padding: 0;
   box-sizing: border-box;
   width: 176px;
   height: 48px;
@@ -108,4 +109,22 @@
 
 .navigation__logout-icon {
   padding: 0 0 0 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .navigation {
+    padding-right: 44px;
+    gap: 16px;
+  }
+
+  .navigation__link {
+    font-size: 16px;
+    padding: 0 3px;
+  }
+
+  .navigation__sign-in-button {
+    width: 152px;
+    height: 40px;
+    font-size: 16px;
+  }
 }
