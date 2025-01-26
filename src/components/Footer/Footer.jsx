@@ -44,24 +44,26 @@ function Footer() {
           ></span>
           TripleTen
         </a>
-        <a
-          href="https://github.com/nathanielDaley/news-explorer-frontend"
-          target="_blank"
-          className="footer__icon-link"
-        >
-          <img src={gitHubIcon} alt="gitHub icon" className="footer__icon" />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/nathanieldaley/"
-          target="_blank"
-          className="footer__icon-link"
-        >
-          <img
-            src={linkedinIcon}
-            alt="linkedin icon"
-            className="footer__icon"
-          />
-        </a>
+        <div className="footer__icon-links">
+          <a
+            href="https://github.com/nathanielDaley/news-explorer-frontend"
+            target="_blank"
+            className="footer__icon-link"
+          >
+            <img src={gitHubIcon} alt="gitHub icon" className="footer__icon" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/nathanieldaley/"
+            target="_blank"
+            className="footer__icon-link"
+          >
+            <img
+              src={linkedinIcon}
+              alt="linkedin icon"
+              className="footer__icon"
+            />
+          </a>
+        </div>
       </div>
     </footer>
   );

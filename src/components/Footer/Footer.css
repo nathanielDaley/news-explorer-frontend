@@ -1,4 +1,5 @@
 .footer {
+  box-sizing: border-box;
   height: 80px;
   margin: 0px;
   padding: 0 104px;
@@ -57,6 +58,7 @@
 }
 
 .footer__links {
+  position: relative;
   display: flex;
   justify-content: space-between;
   font-family: Roboto, Arial, sans-serif;
@@ -97,6 +99,7 @@
 }
 
 .footer__icon {
+  box-sizing: border-box;
   height: 24px;
   width: 24px;
 }
@@ -105,5 +108,35 @@
   .footer {
     height: 64px;
     padding: 0 40px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .footer {
+    height: 176px;
+    padding: 20px 16px 22px;
+    flex-direction: column-reverse;
+    align-items: baseline;
+  }
+
+  .footer__link {
+    margin-right: 0;
+  }
+
+  .footer__links {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 25px;
+  }
+
+  .footer__icon-links {
+    position: absolute;
+    top: 0;
+    right: -215px;
+  }
+
+  .footer__copyright {
+    font-size: 14px;
   }
 }
