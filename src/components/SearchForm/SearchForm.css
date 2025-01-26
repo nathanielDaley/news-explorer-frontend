@@ -140,7 +140,7 @@
 @media screen and (max-width: 320px) {
   .search-form {
     height: 536px;
-    padding-top: 86px;
+    padding: 86px 16px 0;
     justify-self: center;
   }
 
