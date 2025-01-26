@@ -67,17 +67,30 @@
   .profile {
     padding-top: 90px;
   }
+
   .profile__header {
     padding: 0 40px 32px;
   }
+
   .profile__title {
     font-size: 14px;
     margin-bottom: 16px;
   }
+
   .profile__information {
     max-width: 336px;
     font-size: 30px;
     line-height: 34px;
     margin-bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .profile {
+    padding-top: 64px;
+  }
+
+  .profile__header {
+    padding: 0 16px 32px;
   }
 }
