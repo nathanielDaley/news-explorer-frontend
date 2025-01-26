@@ -4,7 +4,7 @@
   margin: 0;
   padding: 80px 15% 80px 7.2%;
   display: flex;
-  gap: 60px;
+  gap: 56px;
   align-items: center;
 }
 
@@ -23,6 +23,9 @@
 }
 
 .about__title {
+  box-sizing: border-box;
+  margin: 0 0 24px 0;
+  padding: 0;
   font-family: Roboto Slab, Garamond, "Times New Roman";
   font-size: 40px;
   font-weight: 400;
@@ -34,6 +37,9 @@
 }
 
 .about__description {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   font-family: Roboto, Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -41,4 +47,21 @@
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    padding: 40px;
+  }
+
+  .about__image {
+    max-width: 232px;
+    max-height: 232px;
+  }
+
+  .about__title {
+    margin-bottom: 16px;
+    font-size: 30px;
+    line-height: 40px;
+  }
 }
