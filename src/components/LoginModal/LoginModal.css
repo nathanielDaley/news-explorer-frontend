@@ -25,3 +25,14 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
+
+.login-modal__input:focus {
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+}
+
+@media screen and (max-width: 768px) {
+  .login-modal__input {
+  }
+}
