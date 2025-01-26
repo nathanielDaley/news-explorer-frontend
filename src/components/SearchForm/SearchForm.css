@@ -8,14 +8,14 @@
   background-position: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
 .search-form__title {
+  box-sizing: border-box;
   width: 608px;
   margin: 0;
-  padding: 70px 0 32px 0;
+  padding: 160px 0 32px 0;
   font-family: "Roboto Slab", Garamond, "Times New Roman";
   font-size: 60px;
   font-weight: 400;
@@ -106,4 +106,31 @@
 
 .search-form__button:active {
   background-color: rgba(42, 101, 204, 1);
+}
+
+@media screen and (max-width: 768px) {
+  .search-form {
+    height: 400px;
+  }
+  .search-form__title {
+    width: 385px;
+    padding: 104px 0 16px 0;
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .search-form__description {
+    width: 452px;
+  }
+
+  .search-form__input {
+    width: 452px;
+    height: 56px;
+    margin: 48px 0 0;
+  }
+
+  .search-form__button {
+    width: 160px;
+    height: 56px;
+  }
 }
