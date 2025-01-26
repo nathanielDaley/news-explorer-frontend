@@ -10,3 +10,13 @@
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 16px 0;
 }
+
+@media screen and (max-width: 768px) {
+  .saved-news-card-list {
+    padding: 40px;
+  }
+
+  .saved-news-card-list__card-list {
+    grid-template-columns: repeat(auto-fit, minmax(224px, 1fr));
+  }
+}

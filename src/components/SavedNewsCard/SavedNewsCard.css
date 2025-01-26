@@ -103,3 +103,25 @@
   width: 159px;
   transition: linear 0.3s width;
 }
+
+@media screen and (max-width: 768px) {
+  .saved-news-card {
+    width: 224px;
+    height: 420px;
+  }
+
+  .saved-news-card__keyword {
+    top: 8px;
+    left: 8px;
+  }
+
+  .saved-news-card__delete-button {
+    top: 8px;
+    right: 8px;
+  }
+
+  .saved-news-card__delete-button-description {
+    top: 56px;
+    right: 8px;
+  }
+}

@@ -97,3 +97,18 @@
   width: 182px;
   transition: linear 0.3s width;
 }
+
+@media screen and (max-width: 768px) {
+  .main-news-card {
+    width: 224px;
+    height: 420px;
+  }
+  .main-news-card__save-button {
+    top: 8px;
+    right: 8px;
+  }
+  .main-news-card__save-button-description {
+    top: 56px;
+    right: 8px;
+  }
+}

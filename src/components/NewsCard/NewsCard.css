@@ -78,3 +78,22 @@
   color: rgba(182, 188, 191, 1);
   text-transform: uppercase;
 }
+
+@media screen and (max-width: 768px) {
+  .news-card__image {
+    height: 150px;
+  }
+  .news-card__content {
+    padding: 16px 15px;
+  }
+  .news-card__title {
+    margin: 0 0 10px 0;
+    font-size: 22px;
+    line-height: 24px;
+    -webkit-line-clamp: 3;
+  }
+  .news-card__description {
+    margin: 0 0 12px 0;
+    -webkit-line-clamp: 4;
+  }
+}
