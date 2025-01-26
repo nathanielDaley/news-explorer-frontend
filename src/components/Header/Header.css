@@ -48,3 +48,14 @@
     padding-left: 40px;
   }
 }
+
+@media screen and (max-width: 320px) {
+  .header {
+    height: 56px;
+  }
+
+  .header__title {
+    padding-left: 16px;
+    font-size: 16px;
+  }
+}
