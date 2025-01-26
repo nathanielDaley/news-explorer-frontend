@@ -66,16 +66,13 @@
 
   .main-news-card-list__card-list {
     grid-template-columns: repeat(auto-fit, minmax(224px, 1fr));
+    gap: 8px 0;
   }
 
   .main-news-card-list__title {
     font-size: 30px;
     line-height: 34px;
     padding: 0 0 32px 0;
-  }
-
-  .main-news-card-list__card-list {
-    gap: 8px 0;
   }
 
   .main-news-card-list__show-more-button {
