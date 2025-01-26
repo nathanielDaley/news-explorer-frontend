@@ -36,7 +36,7 @@ function ModalWithForm({
             className="modal-with-form__close-icon"
           />
         </button>
-        <form onSubmit={submitForm} className="modal-with-form__form">
+        <form onSubmit={submitForm} className="modal-with-form__form" isValid>
           {children}
           <button type="submit" className="modal-with-form__submit-button">
             {buttonText}

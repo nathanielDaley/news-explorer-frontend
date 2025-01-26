@@ -14,6 +14,13 @@
   transition: visibility 0s linear 0.4s, opacity 0.4s linear;
 }
 
+.modal-with-form__form:invalid > button {
+  background-color: rgba(230, 232, 235, 1);
+  color: rgba(182, 188, 191, 1);
+  box-shadow: none;
+  cursor: none;
+}
+
 .modal-with-form_opened {
   visibility: visible;
   opacity: 1;
