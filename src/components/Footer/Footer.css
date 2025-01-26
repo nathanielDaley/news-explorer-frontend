@@ -100,3 +100,10 @@
   height: 24px;
   width: 24px;
 }
+
+@media screen and (max-width: 768px) {
+  .footer {
+    height: 64px;
+    padding: 0 40px;
+  }
+}
