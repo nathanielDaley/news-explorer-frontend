@@ -125,3 +125,11 @@
     right: 8px;
   }
 }
+
+@media screen and (max-width: 320px) {
+  .saved-news-card {
+    width: 100%;
+    max-width: 288px;
+    height: 440px;
+  }
+}

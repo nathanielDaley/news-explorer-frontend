@@ -21,3 +21,15 @@
     gap: 8px 0;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .saved-news-card-list {
+    padding: 32px 16px;
+  }
+
+  .saved-news-card-list__card-list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
