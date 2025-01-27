@@ -9,19 +9,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer__copyright">
-        &#169; 2025 Nathaniel Daley, Powered by&nbsp;
-        <a
-          href="https://newsapi.org/"
-          target="_blank"
-          className="footer__link-color_copyright footer__link"
-        >
-          <span
-            data-content="News Api"
-            aria-hidden="true"
-            className="footer__link-transition"
-          ></span>
-          News Api
-        </a>
+        &#169; 2025 Nathaniel Daley, Powered by News Api
       </div>
       <div className="footer__links">
         <NavLink to="/" className="footer__link footer__link_color">
