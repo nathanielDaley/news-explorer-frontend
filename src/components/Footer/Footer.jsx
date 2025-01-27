@@ -12,26 +12,28 @@ function Footer() {
         &#169; 2025 Nathaniel Daley, Powered by News Api
       </div>
       <div className="footer__links">
-        <NavLink to="/" className="footer__link footer__link_color">
-          <span
-            data-content="Home"
-            aria-hidden="true"
-            className="footer__link-transition"
-          ></span>
-          Home
-        </NavLink>
-        <a
-          href="https://tripleten.com/"
-          target="_blank"
-          className="footer__link footer__link_color"
-        >
-          <span
-            data-content="TripleTen"
-            aria-hidden="true"
-            className="footer__link-transition"
-          ></span>
-          TripleTen
-        </a>
+        <div className="footer__normal-links">
+          <NavLink to="/" className="footer__link footer__link_color">
+            <span
+              data-content="Home"
+              aria-hidden="true"
+              className="footer__link-transition"
+            ></span>
+            Home
+          </NavLink>
+          <a
+            href="https://tripleten.com/"
+            target="_blank"
+            className="footer__link footer__link_color"
+          >
+            <span
+              data-content="TripleTen"
+              aria-hidden="true"
+              className="footer__link-transition"
+            ></span>
+            TripleTen
+          </a>
+        </div>
         <div className="footer__icon-links">
           <a
             href="https://github.com/nathanielDaley/news-explorer-frontend"
