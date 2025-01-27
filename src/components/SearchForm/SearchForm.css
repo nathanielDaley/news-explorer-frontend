@@ -115,7 +115,6 @@
 
 @media screen and (max-width: 768px) {
   .search-form {
-    height: 400px;
     padding-top: 104px;
   }
   .search-form__title {
@@ -143,8 +142,7 @@
 
 @media screen and (max-width: 320px) {
   .search-form {
-    height: 536px;
-    padding: 86px 16px 0;
+    padding: 86px 16px 32px;
     justify-self: center;
   }
 
