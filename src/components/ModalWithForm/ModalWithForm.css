@@ -126,7 +126,7 @@
   .modal-with-form {
     width: 100%;
     max-width: 320px;
-    top: 112px;
+    padding-top: 112px;
   }
 
   .modal-with-form__content {
