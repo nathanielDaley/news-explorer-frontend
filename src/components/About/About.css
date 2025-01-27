@@ -2,17 +2,20 @@
   box-sizing: border-box;
   position: relative;
   margin: 0;
-  padding: 80px 15% 80px 7.2%;
-  display: flex;
+  padding: 80px 104px;
+  display: grid;
   gap: 56px;
   align-items: center;
+  width: 100%;
+  grid-template-columns: 1fr 2fr;
+  justify-items: center;
 }
 
 .about__image {
   box-sizing: border-box;
   max-width: 464px;
   max-height: 464px;
-  width: 42.2%;
+  width: 100%;
   height: auto;
   border-radius: 50%;
 }
@@ -68,6 +71,7 @@
 
 @media screen and (max-width: 320px) {
   .about {
+    display: flex;
     padding: 32px 16px 128px;
     flex-direction: column;
     gap: 24px;

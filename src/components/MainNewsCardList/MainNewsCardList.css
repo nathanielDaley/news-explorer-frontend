@@ -11,8 +11,8 @@
 
 .main-news-card-list__card-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 16px 0;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
 }
 
 .main-news-card-list__title {
@@ -65,8 +65,8 @@
   }
 
   .main-news-card-list__card-list {
-    grid-template-columns: repeat(auto-fit, minmax(224px, 1fr));
-    gap: 8px 0;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
   }
 
   .main-news-card-list__title {
