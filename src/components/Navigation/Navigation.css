@@ -131,7 +131,7 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 600px) {
   .navigation {
     display: none;
     visibility: hidden;

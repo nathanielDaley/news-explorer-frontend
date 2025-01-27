@@ -2,7 +2,7 @@
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  padding: 160px 0 80px;
+  padding: 160px 16px 80px;
   margin: 0;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("../../assets/search-background.jpg");
