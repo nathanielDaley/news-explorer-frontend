@@ -23,11 +23,11 @@ function Profile({ handleRemovedSavedArticle }) {
   return (
     <main className="profile">
       <div className="profile__header">
-        <h3 className="profile__title">Saved articles</h3>
-        <h2 className="profile__information">
+        <h2 className="profile__title">Saved articles</h2>
+        <h1 className="profile__information">
           {currentUser.name}, you have {userSavedNewsArticles?.length || 0}{" "}
           saved articles
-        </h2>
+        </h1>
         <p className="profile__keywords-paragraph">
           By keywords:{" "}
           <span className="profile__keywords">
