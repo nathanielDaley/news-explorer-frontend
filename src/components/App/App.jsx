@@ -20,6 +20,7 @@ import * as auth from "../../utils/auth";
 import * as token from "../../utils/token";
 
 import { CurrentUserContext } from "../../contexts/CurrentUserContext.js";
+import MobileModal from "../MobileModal/MobileModal.jsx";
 
 const NUM_ARTICLES_TO_SHOW = 3;
 const SEARCH_EMPTY_ERROR_TITLE = "Nothing found";
@@ -58,6 +59,12 @@ function App() {
     event.preventDefault();
 
     setActiveModal("register");
+  };
+
+  const handleMobileMenuClick = (event) => {
+    event.preventDefault();
+
+    setActiveModal("mobile");
   };
 
   const updateNewsArticles = (query) => {
@@ -160,6 +167,20 @@ function App() {
     setUserSavedNewsArticles(newNewsArticles);
   };
 
+  const handleHomeClick = (event) => {
+    event.preventDefault();
+
+    setActiveModal("");
+    navigate("/");
+  };
+
+  const handleSavedArticlesClick = (event) => {
+    event.preventDefault();
+
+    setActiveModal("");
+    navigate("/profile");
+  };
+
   useEffect(() => {
     if (!activeModal) return; //stops the useEffect from continuing if there is no active modal
 
@@ -171,7 +192,10 @@ function App() {
     };
 
     const handleModalOutsideClick = (event) => {
-      if (event.target.classList.contains("modal-with-form_opened")) {
+      if (
+        event.target.classList.contains("modal-with-form_opened") ||
+        event.target.classList.contains("mobile-modal_opened")
+      ) {
         closeActiveModal();
       }
     };
@@ -196,6 +220,8 @@ function App() {
             <Header
               handleLoginClick={showLoginModalClick}
               handleLogoutClick={handleLogout}
+              handleMobileMenuClick={handleMobileMenuClick}
+              activeModal={activeModal}
             ></Header>
             <Routes>
               <Route
@@ -240,6 +266,14 @@ function App() {
           handleLoginClick={showLoginModalClick}
           handleSubmit={handleRegistration}
         ></RegisterModal>
+        <MobileModal
+          activeModal={activeModal}
+          handleCloseClick={closeActiveModal}
+          handleLoginClick={showLoginModalClick}
+          handleLogoutClick={handleLogout}
+          mobileHomeClick={handleHomeClick}
+          mobileSavedArticlesClick={handleSavedArticlesClick}
+        ></MobileModal>
       </CurrentUserContext.Provider>
     </div>
   );
