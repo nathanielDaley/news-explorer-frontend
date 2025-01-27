@@ -53,7 +53,8 @@
   padding: 0;
   box-sizing: border-box;
   width: 176px;
-  height: 48px;
+  height: 100%;
+  max-height: 48px;
   font-family: Roboto, Arial, sans-serif;
   font-size: 18px;
   font-weight: 500;
@@ -77,7 +78,8 @@
 .navigation__logout-button {
   padding: 0 17px;
   box-sizing: border-box;
-  height: 48px;
+  height: 100%;
+  max-height: 48px;
   font-family: Roboto, Arial, sans-serif;
   font-size: 18px;
   font-weight: 500;
@@ -124,7 +126,7 @@
 
   .navigation__sign-in-button {
     width: 152px;
-    height: 40px;
+    max-height: 40px;
     font-size: 16px;
   }
 }

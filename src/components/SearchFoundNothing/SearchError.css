@@ -13,8 +13,10 @@
 }
 
 .search-error__image {
-  width: 82.5px;
-  height: 82.5px;
+  width: 100%;
+  max-width: 82.5px;
+  height: 100%;
+  max-height: 82.5px;
 }
 
 .search-error__title {

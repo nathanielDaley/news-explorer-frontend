@@ -30,7 +30,8 @@
 
 .main-news-card-list__show-more-button {
   display: block;
-  width: 288px;
+  width: 100%;
+  max-width: 288px;
   height: 64px;
   margin: 64px auto 0;
   padding: 0;
@@ -76,7 +77,7 @@
   }
 
   .main-news-card-list__show-more-button {
-    width: 240px;
+    max-width: 240px;
     height: 56px;
     margin: 32px auto 0;
   }
@@ -100,7 +101,6 @@
   }
 
   .main-news-card-list__show-more-button {
-    width: 100%;
     max-width: 288px;
     height: 56px;
     margin: 32px auto 0;

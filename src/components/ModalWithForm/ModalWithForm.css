@@ -30,8 +30,8 @@
 .modal-with-form__content {
   box-sizing: border-box;
   padding: 34px 36px 28px;
-  max-width: 430px;
   width: 100%;
+  max-width: 430px;
   position: relative;
   background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.3);
@@ -42,8 +42,10 @@
   position: absolute;
   top: -47px;
   right: -47px;
-  height: 40px;
-  width: 40px;
+  width: 100%;
+  max-width: 40px;
+  height: 100%;
+  max-height: 40px;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -136,12 +138,12 @@
     box-sizing: border-box;
     top: -40px;
     right: 15px;
-    width: 24px;
-    height: 24px;
+    max-width: 24px;
+    max-height: 24px;
   }
 
   .modal-with-form__close-icon {
-    width: 24px;
-    height: 24px;
+    max-width: 24px;
+    max-height: 24px;
   }
 }

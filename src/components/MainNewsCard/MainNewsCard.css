@@ -1,8 +1,10 @@
 .main-news-card {
   position: relative;
   box-sizing: border-box;
+  width: 100%;
   max-width: 400px;
-  height: 576px;
+  height: 100%;
+  max-height: 576px;
   margin: 0;
   padding: 0;
   border-radius: 16px;
@@ -24,8 +26,10 @@
   position: absolute;
   top: 24px;
   right: 24px;
-  height: 40px;
-  width: 40px;
+  height: 100%;
+  max-height: 40px;
+  width: 100%;
+  max-width: 40px;
   margin: 0;
   padding: 0;
   background-color: rgba(255, 255, 255, 1);
@@ -43,8 +47,10 @@
 
 .main-news-card__unsaved-icon {
   box-sizing: border-box;
-  width: 40px;
-  height: 40px;
+  height: 100%;
+  max-height: 40px;
+  width: 100%;
+  max-width: 40px;
   padding: 8px;
   opacity: 0.5;
   transition: linear 0.3s opacity;
@@ -57,8 +63,10 @@
 
 .main-news-card__saved-icon {
   box-sizing: border-box;
-  width: 40px;
-  height: 40px;
+  height: 100%;
+  max-height: 40px;
+  width: 100%;
+  max-width: 40px;
   padding: 8px;
   opacity: 1;
   cursor: default;
@@ -100,8 +108,8 @@
 
 @media screen and (max-width: 768px) {
   .main-news-card {
-    width: 224px;
-    height: 420px;
+    max-width: 224px;
+    max-height: 420px;
   }
   .main-news-card__save-button {
     top: 8px;
@@ -115,8 +123,7 @@
 
 @media screen and (max-width: 320px) {
   .main-news-card {
-    width: 100%;
     max-width: 288px;
-    height: 440px;
+    max-height: 440px;
   }
 }

@@ -1,8 +1,10 @@
 .saved-news-card {
   position: relative;
   box-sizing: border-box;
-  width: 400px;
-  height: 576px;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  max-height: 576px;
   margin: 0;
   padding: 0;
   border-radius: 16px;
@@ -44,8 +46,9 @@
   right: 69px;
   margin: 0px;
   padding: 0 0;
-  height: 40px;
   width: 0;
+  height: 100%;
+  max-height: 40px;
   visibility: hidden;
   transition: linear 0.3s width, linear 0.3s visibility;
   white-space: nowrap;
@@ -70,8 +73,10 @@
   position: absolute;
   top: 24px;
   right: 24px;
-  height: 40px;
-  width: 40px;
+  width: 100%;
+  max-width: 40px;
+  height: 100%;
+  max-height: 40px;
   margin: 0;
   padding: 0;
   background-color: rgba(255, 255, 255, 1);
@@ -85,8 +90,10 @@
 
 .saved-news-card__delete-icon {
   box-sizing: border-box;
-  width: 40px;
-  height: 40px;
+  width: 100%;
+  max-width: 40px;
+  height: 100%;
+  max-height: 40px;
   padding: 8px;
   opacity: 0.5;
   transition: linear 0.3s opacity;
@@ -106,8 +113,8 @@
 
 @media screen and (max-width: 768px) {
   .saved-news-card {
-    width: 224px;
-    height: 420px;
+    max-width: 224px;
+    max-height: 420px;
   }
 
   .saved-news-card__keyword {
@@ -128,8 +135,7 @@
 
 @media screen and (max-width: 320px) {
   .saved-news-card {
-    width: 100%;
     max-width: 288px;
-    height: 440px;
+    max-height: 440px;
   }
 }
