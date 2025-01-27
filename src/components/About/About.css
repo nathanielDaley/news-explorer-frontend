@@ -55,6 +55,7 @@
 @media screen and (max-width: 768px) {
   .about {
     padding: 40px;
+    gap: 32px;
   }
 
   .about__image {
@@ -69,7 +70,7 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 550px) {
   .about {
     display: flex;
     padding: 32px 16px 128px;
