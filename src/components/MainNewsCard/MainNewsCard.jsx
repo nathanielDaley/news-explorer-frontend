@@ -14,8 +14,7 @@ function MainNewsCard({
   lastQuery,
   newsArticles,
 }) {
-  const { currentUser, userSavedNewsArticles, isLoggedIn } =
-    useContext(CurrentUserContext);
+  const { userSavedNewsArticles, isLoggedIn } = useContext(CurrentUserContext);
 
   const [isSaved, setIsSaved] = useState(false);
 
@@ -42,6 +41,7 @@ function MainNewsCard({
       <a
         href={newsArticle.url}
         target="_blank"
+        rel="noreferrer"
         className="main-news-card__card-link"
       >
         <button

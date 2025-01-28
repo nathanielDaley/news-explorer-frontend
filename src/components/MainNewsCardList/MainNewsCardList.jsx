@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import MainNewsCard from "../MainNewsCard/MainNewsCard";
 import "./MainNewsCardList.css";
 

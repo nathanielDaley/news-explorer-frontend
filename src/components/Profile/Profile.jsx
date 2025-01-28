@@ -5,8 +5,7 @@ import SavedNewsCardList from "../SavedNewsCardList/SavedNewsCardList";
 import "./Profile.css";
 
 function Profile({ handleRemovedSavedArticle }) {
-  const { currentUser, userSavedNewsArticles, isLoggedIn } =
-    useContext(CurrentUserContext);
+  const { currentUser, userSavedNewsArticles } = useContext(CurrentUserContext);
 
   const [keywords, setKeywords] = useState([]);
 

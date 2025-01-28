@@ -18,7 +18,7 @@ function LoginModal({
   handleRegisterClick,
   handleSubmit,
 }) {
-  const { values, handleChange, setValues } = useForm({});
+  const { values, handleChange } = useForm({});
 
   return (
     <ModalWithForm

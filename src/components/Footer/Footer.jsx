@@ -24,6 +24,7 @@ function Footer() {
           <a
             href="https://tripleten.com/"
             target="_blank"
+            rel="noreferrer"
             className="footer__link footer__link_color"
           >
             <span
@@ -38,6 +39,7 @@ function Footer() {
           <a
             href="https://github.com/nathanielDaley/news-explorer-frontend"
             target="_blank"
+            rel="noreferrer"
             className="footer__icon-link"
           >
             <img src={gitHubIcon} alt="gitHub icon" className="footer__icon" />
@@ -45,6 +47,7 @@ function Footer() {
           <a
             href="https://www.linkedin.com/in/nathanieldaley/"
             target="_blank"
+            rel="noreferrer"
             className="footer__icon-link"
           >
             <img

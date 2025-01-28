@@ -16,6 +16,7 @@ function SavedNewsCard({ newsArticle, handleRemovedSavedArticle }) {
       <a
         href={newsArticle.url}
         target="_blank"
+        rel="noreferrer"
         className="saved-news-card__card-link"
       >
         <label className="saved-news-card__keyword">
