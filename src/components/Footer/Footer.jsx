@@ -8,9 +8,9 @@ import linkedinIcon from "../../assets/linkedin.svg";
 function Footer() {
   return (
     <footer className="footer">
-      <div className="footer__copyright">
+      <h3 className="footer__copyright">
         &#169; 2025 Nathaniel Daley, Powered by News Api
-      </div>
+      </h3>
       <div className="footer__links">
         <div className="footer__normal-links">
           <NavLink to="/" className="footer__link footer__link_color">
