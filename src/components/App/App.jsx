@@ -21,6 +21,7 @@ import * as token from "../../utils/token";
 
 import { CurrentUserContext } from "../../contexts/CurrentUserContext.js";
 import MobileModal from "../MobileModal/MobileModal.jsx";
+import RegistrationSuccessfulModal from "../RegistrationSuccessfulModal/RegistrationSuccessfulModal.jsx";
 
 const NUM_ARTICLES_TO_SHOW = 3;
 const SEARCH_EMPTY_ERROR_TITLE = "Nothing found";
@@ -129,7 +130,7 @@ function App() {
 
   const handleRegistration = ({ username, email, password }) => {
     auth.register(username, email, password).then((data) => {
-      handleLogin({ email, password });
+      setActiveModal("registration-successful");
     });
   };
 
@@ -194,7 +195,8 @@ function App() {
     const handleModalOutsideClick = (event) => {
       if (
         event.target.classList.contains("modal-with-form_opened") ||
-        event.target.classList.contains("mobile-modal_opened")
+        event.target.classList.contains("mobile-modal_opened") ||
+        event.target.classList.contains("registration-successful-modal_opened")
       ) {
         closeActiveModal();
       }
@@ -274,6 +276,11 @@ function App() {
           mobileHomeClick={handleHomeClick}
           mobileSavedArticlesClick={handleSavedArticlesClick}
         ></MobileModal>
+        <RegistrationSuccessfulModal
+          activeModal={activeModal}
+          handleCloseClick={closeActiveModal}
+          handleSubmitClick={showLoginModalClick}
+        ></RegistrationSuccessfulModal>
       </CurrentUserContext.Provider>
     </div>
   );

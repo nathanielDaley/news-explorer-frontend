@@ -20,7 +20,7 @@ function RegisterModal({
   handleLoginClick,
   handleSubmit,
 }) {
-  const { values, handleChange } = useForm({});
+  const { values, handleChange, setValues } = useForm({});
 
   return (
     <ModalWithForm
