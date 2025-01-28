@@ -14,8 +14,8 @@ function About() {
           and Agile methodologies. I’m skilled in Python, Linux systems, and
           various programming languages, allowing me to efficiently handle
           complex software and hardware testing.
-          <br />
-          <br />
+        </p>
+        <p className="about__description">
           Outside of work, I love spending time with my dog and playing video
           games, which helps me hone my problem-solving and strategic thinking
           skills. My combination of technical expertise and personal passions

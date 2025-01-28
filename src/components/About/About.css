@@ -52,6 +52,10 @@
   text-decoration-skip-ink: none;
 }
 
+.about__description:not(:last-child) {
+  margin-bottom: 24px;
+}
+
 @media screen and (max-width: 768px) {
   .about {
     padding: 40px;
