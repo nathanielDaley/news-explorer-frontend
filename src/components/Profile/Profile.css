@@ -1,0 +1,96 @@
+.profile {
+  margin: 0;
+  padding: 120px 0 0;
+}
+
+.profile_hidden {
+  display: none;
+}
+
+.profile__header {
+  margin: 0;
+  padding: 0 102px 56px;
+}
+
+.profile__title {
+  margin: 0 0 28px 0;
+  padding: 0;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(26, 27, 34, 0.5);
+}
+
+.profile__information {
+  max-width: 530px;
+  width: 100%;
+  margin: 0 0 30px 0;
+  padding: 0;
+  font-family: "Roboto Slab", Garamond, "Times New Roman";
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 46px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(26, 27, 34, 1);
+}
+
+.profile__keywords-paragraph {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(26, 27, 34, 1);
+}
+
+.profile__keywords {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+@media screen and (max-width: 768px) {
+  .profile {
+    padding-top: 90px;
+  }
+
+  .profile__header {
+    padding: 0 40px 32px;
+  }
+
+  .profile__title {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  .profile__information {
+    max-width: 336px;
+    font-size: 30px;
+    line-height: 34px;
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .profile {
+    padding-top: 64px;
+  }
+
+  .profile__header {
+    padding: 0 16px 32px;
+  }
+}

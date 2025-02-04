@@ -1,0 +1,108 @@
+.main-news-card-list {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 80px 104px;
+  background-color: rgba(245, 246, 247, 1);
+}
+
+.main-news-card-list_hidden {
+  display: none;
+}
+
+.main-news-card-list__card-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.main-news-card-list__title {
+  margin: 0;
+  padding: 0 0 64px 0;
+  font-family: "Roboto Slab", Garamond, "Times New Roman";
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 46px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(26, 27, 34, 1);
+}
+
+.main-news-card-list__show-more-button {
+  display: block;
+  width: 100%;
+  max-width: 288px;
+  height: 64px;
+  margin: 64px auto 0;
+  padding: 0;
+  border-radius: 80px;
+  border: none;
+  background-color: rgba(255, 255, 255, 1);
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  cursor: pointer;
+  opacity: 1;
+  transition: linear 0.3s background-color, linear 0.3s opacity;
+}
+
+.main-news-card-list__show-more-button:hover {
+  background-color: rgba(232, 232, 232, 1);
+  opacity: 0.9;
+  transition: linear 0.3s background-color, linear 0.3s opacity;
+}
+
+.main-news-card-list__show-more-button_hidden {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .main-news-card-list {
+    padding: 40px;
+  }
+
+  .main-news-card-list__card-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .main-news-card-list__title {
+    font-size: 30px;
+    line-height: 34px;
+    padding: 0 0 32px 0;
+  }
+
+  .main-news-card-list__show-more-button {
+    max-width: 240px;
+    height: 56px;
+    margin: 32px auto 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .main-news-card-list {
+    padding: 32px 16px;
+  }
+
+  .main-news-card-list__card-list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .main-news-card-list__title {
+    font-size: 30px;
+    line-height: 34px;
+    padding-bottom: 58px;
+  }
+
+  .main-news-card-list__show-more-button {
+    max-width: 288px;
+    height: 56px;
+    margin: 32px auto 0;
+  }
+}

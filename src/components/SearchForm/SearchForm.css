@@ -1,0 +1,169 @@
+.search-form {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 160px 16px 80px;
+  margin: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../../assets/search-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-form__title {
+  box-sizing: border-box;
+  margin: 0 0 32px;
+  padding: 0;
+  width: 100%;
+  max-width: 608px;
+  font-family: "Roboto Slab", Garamond, "Times New Roman";
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 64px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgb(255, 255, 255);
+}
+
+.search-form__description {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgb(255, 255, 255);
+}
+
+.search-form__input-container {
+  position: relative;
+}
+
+.search-form__input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 64px;
+  padding: 21px;
+  margin: 88px 0 0;
+  border-radius: 100px;
+  border: 1px solid rgba(209, 210, 214, 1);
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(26, 27, 34, 1);
+}
+
+.search-form__input::placeholder {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.search-form__input:focus {
+  outline: none;
+}
+
+.search-form__button {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  right: -2px;
+  width: 100%;
+  max-width: 168px;
+  height: 100%;
+  max-height: 64px;
+  margin: 0;
+  padding: 0;
+  border-radius: 100px;
+  border: none;
+  background-color: rgba(47, 113, 229, 1);
+  box-shadow: 0px 5px 15px 0px rgba(14, 26, 57, 0.2);
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+}
+
+.search-form__button:hover {
+  background-color: rgba(52, 126, 255, 1);
+}
+
+.search-form__button:active {
+  background-color: rgba(42, 101, 204, 1);
+}
+
+@media screen and (max-width: 768px) {
+  .search-form {
+    padding-top: 104px;
+  }
+  .search-form__title {
+    max-width: 385px;
+    margin-bottom: 16px;
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .search-form__description {
+    max-width: 452px;
+  }
+
+  .search-form__input {
+    max-width: 452px;
+    height: 56px;
+    margin: 48px 0 0;
+  }
+
+  .search-form__button {
+    max-width: 160px;
+    max-height: 56px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .search-form {
+    padding: 86px 16px 32px;
+    justify-self: center;
+  }
+
+  .search-form__title {
+    max-width: 285px;
+  }
+
+  .search-form__description {
+    max-width: 288px;
+  }
+
+  .search-form__input {
+    max-width: 288px;
+    height: 56px;
+    margin: 122px 0 0;
+  }
+
+  .search-form__button {
+    max-width: 288px;
+    height: 56px;
+    position: relative;
+    margin-top: 16px;
+  }
+}

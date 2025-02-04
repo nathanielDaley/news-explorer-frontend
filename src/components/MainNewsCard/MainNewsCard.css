@@ -1,0 +1,129 @@
+.main-news-card {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  max-height: 576px;
+  margin: 0;
+  padding: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.main-news-card:hover {
+  box-shadow: 0px 16px 16px -8px rgba(8, 29, 45, 0.1);
+  cursor: pointer;
+}
+
+.main-news-card__card-link {
+  text-decoration: none;
+}
+
+.main-news-card__save-button {
+  box-sizing: border-box;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  height: 100%;
+  max-height: 40px;
+  width: 100%;
+  max-width: 40px;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.main-news-card__icon_hidden {
+  display: none;
+}
+
+.main-news-card__unsaved-icon {
+  box-sizing: border-box;
+  height: 100%;
+  max-height: 40px;
+  width: 100%;
+  max-width: 40px;
+  padding: 8px;
+  opacity: 0.5;
+  transition: linear 0.3s opacity;
+}
+
+.main-news-card__unsaved-icon:hover {
+  opacity: 1;
+  transition: linear 0.3s opacity;
+}
+
+.main-news-card__saved-icon {
+  box-sizing: border-box;
+  height: 100%;
+  max-height: 40px;
+  width: 100%;
+  max-width: 40px;
+  padding: 8px;
+  opacity: 1;
+  cursor: default;
+}
+
+.main-news-card__save-button-description {
+  box-sizing: border-box;
+  position: absolute;
+  top: 24px;
+  right: 69px;
+  margin: 0px;
+  padding: 0 0;
+  height: 40px;
+  width: 0;
+  visibility: hidden;
+  transition: linear 0.3s width, linear 0.3s visibility;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-news-card__save-button:hover + .main-news-card__save-button-description {
+  visibility: visible;
+  width: 182px;
+  transition: linear 0.3s width;
+}
+
+@media screen and (max-width: 768px) {
+  .main-news-card {
+    max-width: 224px;
+    max-height: 420px;
+  }
+  .main-news-card__save-button {
+    top: 8px;
+    right: 8px;
+  }
+  .main-news-card__save-button-description {
+    top: 56px;
+    right: 8px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .main-news-card {
+    max-width: 288px;
+    max-height: 440px;
+  }
+}

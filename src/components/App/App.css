@@ -1,0 +1,25 @@
+.app {
+  position: relative;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.app__content {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.test {
+  width: 100%;
+}
