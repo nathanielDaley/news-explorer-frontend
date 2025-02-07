@@ -6,7 +6,7 @@
 
 ### Overview
 
-This is the front end of the [News Explorer](https://github.com/nathanielDaley/news-explorer-frontend) web application. Search for and save new articles from the [News Api](https://newsapi.org/).
+This is the front end of the [News Explorer](https://github.com/nathanielDaley/news-explorer-frontend) web application. Search for and save news articles from the [News Api](https://newsapi.org/).
 
 [Backend](https://github.com/nathanielDaley/news-explorer-backend)
 
